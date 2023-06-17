@@ -167,13 +167,13 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = '┏━━━━━━━━━━━━\n┃──〘/ 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
-  conn.bye = '┏━━━━━━━━━━━━\n┃──〘 *ADIOS* 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
+  conn.welcome = '┏━━━━━━━━━━━━\n┃──〘 💛 *WELCOME 💛* 〙──\n┃━━━━━━━━━━━━\n┃ *_👀 @user bienvenid@ a_* \n┃ *_@subject ✨_*\n┃\n┃=> *_Puedes solicitar mi lista de_*\n┃ *_comandos con:_*\n┠⊷ *#menu*\n┃\n┃=> *_Aquí tienes la descripción_* \n┃ *_del grupo, léela!!_*\n┃\n\n@desc\n\n┗━━━━━━━━━━━'
+  conn.bye = '┏━━━━━━━━━━━━\n┃──〘 👋🏻 *ADIOS* 👋🏻 〙───\n┃━━━━━━━━━━━━\n┃ *_☠ Se fue @user_* \n┃ *_Que dios lo bendiga️_* \n┃ *_Y lo atropelle un tren 😇_*\n┗━━━━━━━━━━'
   conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS!!*'
   conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS!!*'
   conn.sDesc = '📝 *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
   conn.sSubject = '📝 *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
-  conn.sIcon = '🗃️ *SE HA CAMBIADO LA FOTO DEL GRUPO!!*'
+  conn.sIcon = '🥏 *SE HA CAMBIADO LA FOTO DEL GRUPO!!*'
   conn.sRevoke = '🥏 *SE HA ACTUALIZADO EL ENLACE DEL GRUPO!!*\n*NUEVO ENLACE:* @revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
