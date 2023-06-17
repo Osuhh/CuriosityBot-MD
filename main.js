@@ -135,7 +135,7 @@ if (connection == 'open') {
 let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }      
 console.log(chalk.yellow('CONECTADO CORRECTAMENTE'))
 await conn.reply(`59894808483@s.whatsapp.net`, `Hola Creador, soy un nuevo bot 😼`, fkontak2)
-await conn.groupAcceptInvite('HKY8AX69oMnHa0Q3ukh0nR')
+await conn.groupAcceptInvite(global.nna2)
           }
 }
 
