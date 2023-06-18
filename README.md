@@ -54,6 +54,10 @@ git clone https://github.com/Azami19/CuriosityBot-MD1 && cd CuriosityBot-MD1 && 
 ```
 
 ```bash
+ls
+```
+
+```bash
 npm start
 ```
 
