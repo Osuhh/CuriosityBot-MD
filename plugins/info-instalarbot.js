@@ -6,7 +6,7 @@ let texto = `
 ╰┬────────────┈⊷
 ┌┤ *REQUISITOS PARA LAS INSTALACION*
 ┌┤➳ _Dudas: wa.me/59894808483_
-┌┤➳ _Tutoríal: pronto_
+┌┤➳ _Tutoríal: https://youtu.be/aLe-ktERqeU_
 ┌┤➳ _1 GB de almacenamiento_
 ┌┤➳ _Termux: https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.apk/file_
 ┌┤➳ _GitHub: https://github.com/Azami19/CuriosityBot-MD_
@@ -18,7 +18,8 @@ let texto = `
   │> termux-setup-storage
   │> apt-get update -y && apt-get upgrade -y
   │> pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
-  │> git clone https://github.com/Azami19/CuriosityBot-MD1 && cd CuriosityBot-MD1 && yarn 
+  │> git clone https://github.com/Azami19/CuriosityBot-MD1 && cd CuriosityBot-MD1 && yarn install && npm install 
+  │> ls 
   │> npm start 
   ╰────────────┈⊷` 
 let aa = { quoted: m, userJid: conn.user.jid }
