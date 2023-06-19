@@ -137,9 +137,7 @@ if (global.db.data == null) loadDatabase()
 if (connection == 'open') {
 let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }      
 console.log(chalk.yellow('➳ CONECTADO CORRECTAMENTE'))
-await conn.reply(res, `Hola soy un nuevo bot activo 😼\n\n@${owbot} es mi creador si tiene alguna duda`, fkontak2, { mentions: [owbot] })}
-if (connection == 'close') {
-console.log(chalk.yellow(`🚩ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`)) 
+await conn.reply(res, `Hola soy un nuevo bot activo 😼\n\n@${owbot} es mi creador si tiene alguna duda`, fkontak2, { mentions: [owbot] }) 
           }
 }
 
