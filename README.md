@@ -1,4 +1,5 @@
-# `CuriosityBot-MD`
+# `CuriosityBot-MD` 
+Bot el desarrollo
 
 <p align="center">
 <img src="https://telegra.ph/file/847bdd9005d7e75eb2373.jpg" alt="CuriosityBot-MD" width="900"/>
@@ -49,7 +50,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/Undefined17/CuriosityBot-MD && cd CuriosityBot-MD && yarn install && npm install
+git clone https://github.com/Azami19/CuriosityBot-MD1 && cd CuriosityBot-MD1 && yarn install && npm install
 ```
 
 ```bash
@@ -74,7 +75,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://wa.me/59894808483"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 ### EDITOR & PROPIETARIO DEL BOT
-<a href="https://github.com/Undefined17"><img src="https://github.com/Undefined17.png" width="250" height="250" alt="Azami19"/></a>
+<a href="https://github.com/Azami19"><img src="https://github.com/Azami19.png" width="250" height="250" alt="Azami19"/></a>
 
 #### COLABORADORES 
 <a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![elrebelde21](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21) 
