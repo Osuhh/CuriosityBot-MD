@@ -39,7 +39,7 @@
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@whiskeysockets/baileys": "github:WhiskeySockets/Baileys",
+        "@adiwajshing/baileys": "github:WhiskeySockets/Baileys",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^3.0.0",
         "@xct007/frieren-scraper": "^0.0.2",
