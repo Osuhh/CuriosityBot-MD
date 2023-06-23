@@ -5,7 +5,7 @@ import fs from 'fs'
 
 //⊱ ━━━━━.⋅ Owner ⋅.━━━━ ⊰
 global.owner = [
-  ['59894808483', 'Azami 🥏', true],
+  ['59894808483', 'Azami', true],
   ['5214531173598'], ['5214531106422'], ['593968585383'], ['5492266613038'], ['5492266466080']]  
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -97,7 +97,7 @@ global.wait = '*⌛ _Cargando..._ ▬▬▬▭*'
 global.vs = '1.0.0'
 global.yt = 'https://www.youtube.com/@Azami_19'
 global.ig = 'https://instagram.com/azami.19'
-global.md = 'https://github.com/Azami19/CuriosityBot-MD1'
+global.md = 'https://github.com/Undefined17/CuriosityBot-MD'
 global.nn = 'https://chat.whatsapp.com/LFQY7VlRIjtItIt5nKXHjc'
 global.nnn = 'https://chat.whatsapp.com/LFQY7VlRIjtItIt5nKXHjc'
 global.nna2 = 'LFQY7VlRIjtItIt5nKXHjc'
