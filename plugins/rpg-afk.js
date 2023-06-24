@@ -1,8 +1,8 @@
 import db from '../lib/database.js'
 let handler = async (m, { conn, text }) => {
     let user = global.db.data.users[m.sender]
-    if (!text) return m.reply(`Por favor diga su motivo para irse AFK\nEjemplo de uso : \n#afk Voy al baño :v`)
-    if (text.length < 10) return m.reply(`El motivo es muy corto`)
+    if (!text) return m.reply(`*⚠️ POR FAVOR COLOQUE SU MOTIVO PARA ESTAR AFK*\n\nEJEMPLO: \n#afk Voy a comer`)
+    if (text.length < 10) return m.reply(`*⚠️ EL MOTIVO ES MUY CORTO, MINIMO 10 CARÁCTERES*`)
     user.afk = + new Date
     user.afkReason = text
     conn.reply(m.chat, `
