@@ -156,6 +156,15 @@ throw false
 }
 global.opts['swonly'] = isEnable
 break
+case 'antiprivado':
+case 'privado':
+isAll = true
+if (!isROwner) {
+global.dfail('rowner', m, conn)
+throw false
+}
+bot.antiPrivate = isEnable
+break
 default:
 if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 𝑪𝒖𝒓𝒊𝒐𝒔𝒊𝒕𝒚𝑩𝒐𝒕-𝑴𝑫 」* ≫┄┄╮
 │⚌⚌⚌⚌⚌⚌⚌⚌⚌
