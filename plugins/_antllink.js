@@ -20,7 +20,7 @@ let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
 handler.help = ['dino']
 handler.tags = ['owner']
-handler.command = ['spam'] 
+handler.command = ['dino'] 
 
 handler.owner = true
 
