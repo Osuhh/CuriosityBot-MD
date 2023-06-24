@@ -1,6 +1,8 @@
 import db from '../lib/database.js'
 let handler = async (m, { conn, text }) => {
     let user = global.db.data.users[m.sender]
+    if (!text) return m.reply(`Por favor diga su motivo para irse AFK\nEjemplo de uso : \n#afk Voy al baño :v`)
+    if (text.length < 10) return m.reply(`El motivo es muy corto`)
     user.afk = + new Date
     user.afkReason = text
     conn.reply(m.chat, `
@@ -13,8 +15,8 @@ let handler = async (m, { conn, text }) => {
   `, m, { mentions: [m.sender]})
 }
 handler.help = ['afk *<razón>*']
-handler.tags = ['fun']
-handler.command = ['afk']
+handler.tags = ['rpg']
+handler.command = ['update2']
 handler.register = true
 
 export default handler
