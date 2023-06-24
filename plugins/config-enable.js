@@ -187,9 +187,9 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 `, fkontak, m)
 throw false
 }
-conn.reply(m.chat, `📊 *OPCIÓN:* ${type} 
-💻 *ESTADO*: ${isEnable ? 'Activado ✅' : 'Desactivado ❌'}
-📡 *PARA*: ${isAll ? 'Este bot 🤖' : isUser ? '' : 'Este chat 💬'}`, fkontak,  m)
+conn.reply(m.chat, `🗂️ *OPCIÓN:* ${type} 
+📣 *ESTADO*: ${isEnable ? 'Activado ✅' : 'Desactivado ❌'}
+🚀 *PARA*: ${isAll ? 'Este bot 🤖' : isUser ? '' : 'Este chat 💬'}`, fkontak,  m)
 
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
