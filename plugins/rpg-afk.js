@@ -16,7 +16,7 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['afk *<razón>*']
 handler.tags = ['rpg']
-handler.command = ['update2']
+handler.command = ['azami']
 handler.register = true
 
 export default handler
