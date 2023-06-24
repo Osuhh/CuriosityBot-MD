@@ -194,7 +194,8 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 ➵ _${usedPrefix}disable *autoread*_
 ➵ _${usedPrefix}enable *modejadibot*_
 ➵ _${usedPrefix}disable *modejadibot*_
-`, fkontak, m)
+➵ _${usedPrefix}enable *antiprivado*_
+➵ _${usedPrefix}disable *antiprivado*_`, fkontak, m)
 throw false
 }
 conn.reply(m.chat, `🗂️ *OPCIÓN:* ${type} 
