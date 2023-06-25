@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => {
     user.afk = + new Date
     user.afkReason = text
     conn.reply(m.chat, `
-\t\t\t\t *「 ⏰ ESTADO AFK ⏰ 」*
+\t\t\t\t *「 ⚠️ ESTADO AFK ⚠️ 」*
  
 *► Estarás afk hasta que envíes un mensaje.*
 
@@ -16,7 +16,7 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['afk *<razón>*']
 handler.tags = ['rpg']
-handler.command = ['azami']
+handler.command = ['afk']
 handler.register = true
 
 export default handler
