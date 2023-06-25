@@ -6,7 +6,7 @@ let pp = 'https://us.123rf.com/450wm/emojiimage/emojiimage1802/emojiimage1802003
 let d = Math.floor(Math.random() * 20)
 global.db.data.users[m.sender].limit += d * 1  
 let time = global.db.data.users[m.sender].lastdiamantes + 600000
-if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*💟 Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`  
+if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*⏰ Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`  
 
 global.db.data.users[m.sender].lastdiamantes = new Date * 1  
   
