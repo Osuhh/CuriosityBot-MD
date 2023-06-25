@@ -1,6 +1,6 @@
 let handler = async (m, { conn, isPrems}) => { 
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let minar = `${pickRandom(['Que pro 😎 has minado','🌟✨ Genial!! Obtienes','WOW!! eres un(a) gran Minero(a) ⛏️ Obtienes','Felicidades!! Ahora tienes','⛏️ Obtienes'])}`
+let minar = `*Que pro 😎 has minado ${d} diamantes*`
 let pp = 'https://us.123rf.com/450wm/emojiimage/emojiimage1802/emojiimage180200332/95468325-mont%C3%B3n-de-piedras-preciosas-diamantes-azules-brillantes-concepto-de-joyas-caras-s%C3%ADmbolo-de-riqueza-d.jpg?ver=6'
 
 let d = Math.floor(Math.random() * 20)
@@ -11,7 +11,8 @@ if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*�
 global.db.data.users[m.sender].lastdiamantes = new Date * 1  
   
 
-conn.reply(m.chat, `*${minar} ${d} DIAMANTES 💎*`, fkontak, m)
+//conn.reply(m.chat, `*${minar} ${d} DIAMANTES 💎*`, fkontak, m)
+conn.sendFile(m.chat, pp, 'bot.jpg', minar, m, true, { type: 'conversation', ptt: true, sendEphemeral: true, quoted: fkontak })}
 
 }
 handler.help = ['minar']
