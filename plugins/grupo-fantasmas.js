@@ -30,12 +30,12 @@ let handler = async (m, {conn, text, participants}) => {
     `*⚠️ REVISIÓN DE INACTIVOS ⚠️*\n\n*📑 GRUPO:* ${await conn.getName(
       m.chat
     )}\n*🪁 MIEMBROS DEL GRUPO:* ${sum}\n\n*👻 LISTAS DE FANTASMA 👻*\n${sider
-      .map((v) => "┣❥ @" + v.replace(/@.+/, ""))
+      .map((v) => "  ┣❥ @" + v.replace(/@.+/, ""))
       .join("\n")}\n\n*📝 NOTA: Esto no es al 100% acertado, el bot inicia el conteo de mensajes a partir de que se active en este número*`,
     null,
     {mentions: sider}
-  );
-};
+  )
+}
 handler.command = /^(verfantasmas|fantasmas)$/i;
 handler.admin = true
 handler.botAdmin = true
