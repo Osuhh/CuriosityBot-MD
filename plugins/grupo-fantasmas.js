@@ -7,7 +7,7 @@ let handler = async (m, {conn, text, participants}) => {
   }
   var total = 0
   var sider = []
-  for (let i = 0 i < sum; i++) {
+  for (let i = 0; i < sum; i++) {
     let users = m.isGroup ? participants.find((u) => u.id == member[i]) : {}
     if (
       (typeof global.db.data.users[member[i]] == "undefined" || global.db.data.users[member[i]].chat == 0) &&
