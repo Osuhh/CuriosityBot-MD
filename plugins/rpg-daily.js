@@ -3,7 +3,7 @@ const prem = 20000
 
 let handler = async (m, {conn, isPrems }) => {
   let time = global.db.data.users[m.sender].lastclaim + 3600000
-  if (new Date - global.db.data.users[m.sender].lastclaim < 3600000) throw `*🕚 Vuelve en  *${msToTime(time - new Date())}* `
+  if (new Date - global.db.data.users[m.sender].lastclaim < 3600000) throw `*🕚 Vuelve en ${msToTime(time - new Date())}* `
   global.db.data.users[m.sender].exp += isPrems ? prem : free
   m.reply(`
 🎁 *RECOMPENSA DIARIA*
