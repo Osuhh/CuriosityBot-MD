@@ -3,27 +3,25 @@ const items = [
 ]
 let confirmation = {}
 async function handler(m, { conn, args, usedPrefix, command }) {
-    if (confirmation[m.sender]) return m.reply('estas haciendo una transferencia')
+    if (confirmation[m.sender]) return m.reply('*⚠️ Estas haciendo una transferencia*')
     let user = global.db.data.users[m.sender]
     const item = items.filter(v => v in user && typeof user[v] == 'number')
-    let lol = `✳️ Uso del comamdo 
-*${usedPrefix + command}*  [tipo] [cantidad] [@user]
-📌 Ejemplo : ${usedPrefix + command} exp 65 @59172945992
+    let lol = `*⚠️ USO DEL COMANDO
+${usedPrefix + command}  [tipo] [cantidad] [@user]
+📝 Ejemplo : ${usedPrefix + command} exp 65 @59172945992
 
 
 📍 Artículos transferibles
-┌──────────────
-▢ *limit* = diamante
-▢ *exp* = experiencia
-└──────────────
-`.trim()
+
+💎 *limit* = diamante
+✨ *exp* = experiencia`.trim()
     const type = (args[0] || '').toLowerCase()
     if (!item.includes(type)) return m.reply(lol)
     const count = Math.min(Number.MAX_SAFE_INTEGER, Math.max(1, (isNumber(args[1]) ? parseInt(args[1]) : 1))) * 1
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : args[2] ? (args[2].replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : ''
-    if (!who) return m.reply('✳️ Taguea al usuario')
-    if (!(who in global.db.data.users)) return m.reply(`✳️ Usuario ${who} no está en la  database`)
-    if (user[type] * 1 < count) return m.reply(`✳️  *${type}*  insuficiente para transferir`)
+    if (!who) return m.reply('*⚠️ Taguea al usuario*')
+    if (!(who in global.db.data.users)) return m.reply(`*⚠️ Usuario ${who} no está en la  database*`)
+    if (user[type] * 1 < count) return m.reply(`*⚠️  ${type}  insuficiente para transferir*`)
     let confirm = `
 ¿Está seguro de que desea transferir *${count}* ${type} a  *@${(who || '').replace(/@s\.whatsapp\.net/g, '')}* ? 
 
@@ -32,7 +30,7 @@ Tienes  *60* s
 Escriba: (si) para acertar
 Escriba: (no) para cancelar
 `.trim()
-    let c = 'FG - dylux-bot'
+    let c = 'Azami - Curiosity'
     await conn.reply(m.chat, confirm, m, { mentions: [who] })
     //conn.sendButton(m.chat, confirm, c, null, [['si'], ['no']], m, { mentions: [who] })
     confirmation[m.sender] = {
@@ -57,7 +55,7 @@ handler.before = async m => {
     //if (/no?/g.test(m.text.toLowerCase())) {
         clearTimeout(timeout)
         delete confirmation[sender]
-        return m.reply('Cancelado')
+        return m.reply('*Cancelado*')
     }
     if (/^Si|si$/i.test(m.text) ) { 
    // if (/si?/g.test(m.text.toLowerCase())) {
