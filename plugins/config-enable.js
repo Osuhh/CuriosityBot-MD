@@ -71,7 +71,7 @@ if (!(isAdmin || isOwner)) {
 global.dfail("admin", m, conn)
 throw false
 }}
-chat.onlyLatan = isEnable
+chat.onlyLatinos = isEnable
 break
 case 'antilink2':
 if (m.isGroup) {
