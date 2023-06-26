@@ -1,5 +1,3 @@
-//import db from '../lib/database.js'
-
 const xpperdiamond = 350 
 let handler = async (m, { conn, command, args }) => {
   let count = command.replace(/^buy/i, '')
@@ -9,6 +7,7 @@ let handler = async (m, { conn, command, args }) => {
     global.db.data.users[m.sender].exp -= xpperdiamond * count
     global.db.data.users[m.sender].diamond += count
     conn.reply(m.chat, `*NOTA DE PAGO 📝*
+    
 *COMPRA* : + ${count}💎 
 *GASTADO* : -${xpperdiamond * count} XP`, m)
   } else conn.reply(m.chat, `*⚠️ NO TIENES SUFICIENTE XP PARA COMPAR ${count} DIAMANTES 💎*`, m)
