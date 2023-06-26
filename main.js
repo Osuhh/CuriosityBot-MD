@@ -122,6 +122,11 @@ setInterval(async () => {
 }, 60000) //1 min
 
 async function connectionUpdate(update) {
+let pp = './src/nuevobot.jpg'
+let res = await conn.groupAcceptInvite(global.nna2)
+let owbot = global.suittag[0] 
+let e = owbot + '@s.whatsapp.net'
+let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }      
 const { connection, lastDisconnect, isNewLogin } = update
 if (isNewLogin) conn.isInit = true
 const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
@@ -132,14 +137,7 @@ global.timestamp.connect = new Date
 if (global.db.data == null) loadDatabase()
 if (connection == 'open') {
 console.log(chalk.yellow('➳ CONECTADO CORRECTAMENTE'))
-          }
-let pp = './src/nuevobot.jpg'
-let res = await conn.groupAcceptInvite(global.nna2)
-let owbot = global.suittag[0] 
-let e = owbot + '@s.whatsapp.net'
-let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }      
-await conn.reply(res, `Hola soy un nuevo bot activo 😼\n\n@${owbot} es mi creador si tiene alguna duda`, fkontak2, { mentions: [owbot] }) 
-}
+await conn.reply(res, `Hola soy un nuevo bot activo 😼\n\n@${owbot} es mi creador si tiene alguna duda`, fkontak2, { mentions: [owbot] })}}
 
 process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
