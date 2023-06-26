@@ -9,19 +9,19 @@ export async function before(m, {isAdmin, isOwner}) {
 
   if (isToxic && chat.antiToxic && !isOwner && !isAdmin) {
     user.warn += 1
-    if (!(user.warn >= 3))
+    if (!(user.warn >= 6))
       await m.reply(
         `${
           user.warn == 1 ? `Hola *@${m.sender.split`@`[0]}*` : `*@${m.sender.split`@`[0]}*`
-        }, decir la palabra (${isToxic}) está prohibido en este bot *${user.warn}/3* advertencia`,
+        }, decir la palabra (${isToxic}) está prohibido en este bot *${user.warn}/6* advertencia`,
         false,
         {mentions: [m.sender]}
       )
   }
 
-  if (user.warn >= 3) {
+  if (user.warn >= 6) {
     user.warn = 0;
-    await m.reply(`Hola *@${m.sender.split`@`[0]}*, superaste las 5 advertencias serás eliminado de este grupo`, false, {
+    await m.reply(`Hola *@${m.sender.split`@`[0]}*, superaste las 6 advertencias serás eliminado de este grupo`, false, {
       mentions: [m.sender],
     })
     user.banned = true
