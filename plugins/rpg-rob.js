@@ -1,4 +1,6 @@
 const cooldown = 10800000;
+let ro = 1500
+let d = 20
 
 let handler = async (m, {conn, text, usedPrefix, command, groupMetadata}) => {
   let time = global.db.data.users[m.sender].lastrob + 1800000;
@@ -11,8 +13,8 @@ let handler = async (m, {conn, text, usedPrefix, command, groupMetadata}) => {
     if (!m.mentionedJid.length) m.mentionedJid.push(m.sender);
     if (global.db.data.users[_user] == undefined) return m.reply(`➳ El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`);
     let uuser = global.db.data.users[_user];
-    let exp = Math.floor(Math.random() * 15) + 10;
-    let diamond = Math.floor(Math.random() * 5) + 3;
+    let exp = Math.floor(Math.random() * ro)
+    let diamond = Math.floor(Math.random() * d)
     let raid = `*ʜᴀs sᴀǫᴜᴇᴀᴅᴏ ⚔️ ᴀ @${_user.split("@s.whatsapp.net")[0]}*
 ◦ ᴇxᴘ: ${exp}
 ◦ ᴅɪᴀᴍᴀɴᴛᴇ: ${diamond}
@@ -35,7 +37,7 @@ let handler = async (m, {conn, text, usedPrefix, command, groupMetadata}) => {
   );*/
     global.db.data.users[m.sender].lastrob = new Date() * 1;
   } catch {
-    await m.reply(`ERROR, POR FAVOR INTÉNTELO DE NUEVO, SEGURAMENTE EL USUARIO ESTÁ AFK*`);
+    await m.reply(`*🚓🚓🚓No le pudiste robar por que a este usuario los protege la policía 👮(AFK)*`);
   }
 };
 
