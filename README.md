@@ -12,9 +12,9 @@ Bot en desarrollo
 </a>
 
 ### `⚙️ AJUSTES ⚙️`
-- CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/azami19/CuriosityBot-MD1/blob/main/config.js#L6)
-- CLONAR EL REPOSITORIO [Aqui](https://github.com/Azami19/CuriosityBot-MD1/fork)
-- Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/Azami19/CuriosityBot-MD1/blob/main/package.json#L42)
+- CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/Undefined17/CuriosityBot-MD/blob/main/config.js#L6)
+- CLONAR EL REPOSITORIO [Aqui](https://github.com/Undefined17/CuriosityBot-MD/fork)
+- Puede cambiar a la última versión de baileys editando el package.json [aqui](https://github.com/Undefined17/CuriosityBot-MD/blob/main/package.json#L42)
 
 ### Ejemplo 
 En caso de duda, antes de instalar CuriosityBot-MD, pruebe el bot aquí
@@ -50,7 +50,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/Azami19/CuriosityBot-MD1 && cd CuriosityBot-MD1 && yarn install && npm install
+git clone https://github.com/Undefined17/CuriosityBot-MD && cd CuriosityBot-MD1 && yarn install && npm install
 ```
 
 ```bash
@@ -80,7 +80,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 #### COLABORADORES 
 <a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![elrebelde21](https://github.com/ufdefinido.png?size=100)](https://github.com/ufdefinido) 
 ---|---
-[Gata Dios](https://github.com/GataNina-Li)  | [elrebelde21](https://github.com/ufdefinido)
+[Gata Dios](https://github.com/GataNina-Li)  | [elrebelde21](https://github.com/undefinidoo)
 Colaboradora | Colaborador |
 
 ##### AGRADECIMIENTO ESPECIAL PARA
