@@ -63,6 +63,7 @@ m.reply(doxeo, null, { mentions: conn.parseMention(doxeo) })
 handler.help = ['doxear <nombre> | <@tag>']
 handler.tags = ['fun']
 handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i
+handler.group = true
 export default handler
 
 function pickRandom(list) {
