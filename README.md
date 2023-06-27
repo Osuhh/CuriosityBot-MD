@@ -78,7 +78,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/Undefined17"><img src="https://github.com/Undefined17.png" width="250" height="250" alt="Azami19"/></a>
 
 #### COLABORADORES 
-<a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![elrebelde21](https://github.com/ufdefinido.png?size=100)](https://github.com/ufdefinido) 
+<a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![ufdefinido](https://github.com/ufdefinido.png?size=100)](https://github.com/ufdefinido) 
 ---|---
 [Gata Dios](https://github.com/GataNina-Li)  | [ufdefinido](https://github.com/undefinidoo)
 Colaboradora | Colaborador |
