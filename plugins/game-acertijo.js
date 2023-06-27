@@ -28,7 +28,7 @@ delete conn.tekateki[id]
 }, timeout)]}
 handler.help = ['acertijo']
 handler.tags = ['game']
-handler.command = /^(acertijo|acert|pregunta|adivinanza|tekateki)$/i
+handler.command = /^(acertijo|acert|adivinanza|tekateki)$/i
 handler.register = true
 
 export default handler
