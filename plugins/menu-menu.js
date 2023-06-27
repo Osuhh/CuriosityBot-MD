@@ -154,6 +154,23 @@ ${usedPrefix}delete
 ${usedPrefix}readmore
 ${usedPrefix}styletext
 
+*「 J U E G O S 」*
+${usedPrefix}mates
+${usedPrefix}math
+${usedPrefix}simi
+${usedPrefix}suerte
+${usedPrefix}ppt
+${usedPrefix}tictactoe
+${usedPrefix}deltictactoe
+${usedPrefix}topgays
+${usedPrefix}topotakus
+${usedPrefix}gay
+${usedPrefix}doxear
+${usedPrefix}pregunta
+${usedPrefix}apostar
+${usedPrefix}slot
+${usedPrefix}dado
+
 *「 G R U P O S 」*
 ${usedPrefix}grupo
 ${usedPrefix}kick
@@ -192,8 +209,11 @@ ${usedPrefix}disable gconly
 
 *「 R P G 」*
 ${usedPrefix}minar
+${usedPrefix}minar3
+${usedPrefix}minardiamantes
 ${usedPrefix}daily
 ${usedPrefix}work
+${usedPrefix}afk
 ${usedPrefix}rob
 ${usedPrefix}limit
 ${usedPrefix}reg
@@ -209,6 +229,9 @@ ${usedPrefix}wm
 *「 O W N E R 」*
 ${usedPrefix}update
 ${usedPrefix}restart
+${usedPrefix}autoadmin
+${usedPrefix}leave
+${usedPrefix}salir
 ${usedPrefix}cleartpm
 ${usedPrefix}bc
 ${usedPrefix}bcgc
