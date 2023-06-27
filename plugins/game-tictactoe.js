@@ -38,7 +38,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
 ╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${cb} ░⃟⃜🐾⁩」
 ├❥ᰰຼ *SALA ID* ${room.id}
-├❥ᰰຼ ▢ *Reglas*
+├❥ᰰຼ *⚠️ REGLAS*
 ├❥ᰰຼ Haz 3 filas de símbolos verticales, horizontales o diagonales para ganar
 ├❥ᰰຼ Escribe *surrender* para salir del juego y ser declarado derrotado.
 *╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*`.trim()
@@ -58,7 +58,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
         }
         if (text) room.name = text
         
-     conn.reply(m.chat, `╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${cb} ░⃟⃜🐾⁩」\n├❥ᰰຼ ⏳ *Esperando pareja*\n├❥ᰰຼ Escriba el siguiente comando para aceptar\n├❥ᰰຼ *${usedPrefix + command} ${text}*\n├❥ᰰຼ 🎁 Recompensa: *4999 XP*\n*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*`, m, {
+     conn.reply(m.chat, `╭─╮─᤻─᳒─᤻᳒「░⃟⃜⏳ꪳ۫₎۬〬${cb} ░⃟⃜⏳」\n├❥ᰰຼ *Esperando pareja*\n├❥ᰰຼ Escriba el siguiente comando para aceptar\n├❥ᰰຼ *${usedPrefix + command} ${text}*\n├❥ᰰຼ 🎁 Recompensa: *4999 XP*\n*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*`, m, {
             mentions: conn.parseMention(text)
         })
         
@@ -70,5 +70,5 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 handler.help = ['tictactoe <nombre Sala>']
 handler.tags = ['game']
 handler.command = ['tictactoe', 'ttc', 'ttt', 'xo']
-//handler.register = true 
+handler.register = true 
 export default handler
