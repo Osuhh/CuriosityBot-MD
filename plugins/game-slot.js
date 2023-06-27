@@ -1,4 +1,4 @@
- let reg = 40
+ let reg = 60
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let fa = `
 Cuanto quieres apostar? 
@@ -11,7 +11,7 @@ Cuanto quieres apostar?
     let users = global.db.data.users[m.sender]
     let time = users.lastslot + 10000
     if (new Date - users.lastslot < 10000) throw `⏳ Espere *${msToTime(time - new Date())}* para usar de nuevo`
-    if (apuesta < 100) throw '*⚠️ Mínimo de la apuesta es 100 XP*'
+    if (apuesta < 50) throw '*⚠️ Mínimo de la apuesta es 100 XP*'
     if (users.exp < apuesta) {
         throw `*⚠️ No tienes suficiente XP*`
     }
@@ -40,7 +40,7 @@ Cuanto quieres apostar?
     }
     let end;
     if (a == b && b == c) {
-        end = `🎁 *GANASTE* 🎁\n*+${apuesta + apuesta} XP*`
+        end = `🎁 *GANASTE* 🎁\n*+${apuesta + apuesta + apuesta + apuesta + apuesta} XP*`
         users.exp += apuesta + apuesta
     } else if (a == b || a == c || b == c) {
         end = `🌟 *Casi lo logras sigue intentando :)*\nTen *+${reg} XP*`
@@ -80,4 +80,4 @@ function msToTime(duration) {
     seconds = (seconds < 10) ? "0" + seconds : seconds
 
     return seconds + " Segundo(s)"
-}
+         }
