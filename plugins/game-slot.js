@@ -1,4 +1,4 @@
-let reg = 40
+ let reg = 40
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let fa = `
 Cuanto quieres apostar? 
@@ -53,11 +53,13 @@ Cuanto quieres apostar?
     return await m.reply(
         `🍀 *CURIOSITY - SLOT* 🍀
         
-        🎰 *SLOTS*
-        
+        🎰 ┃ *SLOTS* 
+     ───────────
        ${x[0]} : ${y[0]} : ${z[0]}
        ${x[1]} : ${y[1]} : ${z[1]}
        ${x[2]} : ${y[2]} : ${z[2]}
+     ───────────
+        🎰┃🎰┃ 🎰
        
 ${end}`) 
 }
@@ -78,4 +80,4 @@ function msToTime(duration) {
     seconds = (seconds < 10) ? "0" + seconds : seconds
 
     return seconds + " Segundo(s)"
-         }
+}
