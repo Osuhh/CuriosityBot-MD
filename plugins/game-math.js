@@ -2,7 +2,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     conn.math = conn.math ? conn.math : {}
     m.react('🤔') 
     if (args.length < 1) throw `
-╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${vs} ░⃟⃜🐾⁩」
+╭─╮─᤻─᳒─᤻᳒「 ${vs} ⁩」
 ├🧮 Dificultades disponibles : 
 ├  
 ├❥ᰰຼ ${Object.keys(modes).join(' | ')} 
@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 `.trim()
   let mode = args[0].toLowerCase()
   if (!(mode in modes)) throw `
-╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${vs} ░⃟⃜🐾⁩」
+╭─╮─᤻─᳒─᤻᳒「 ${vs} ⁩」
 ├🧮 Dificultades disponibles : 
 ├  
 ├❥ᰰຼ ${Object.keys(modes).join(' | ')} 
