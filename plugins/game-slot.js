@@ -51,7 +51,14 @@ Cuanto quieres apostar?
     }
     users.lastslot = new Date * 1
     return await m.reply(
-        `🍀 *CURIOSITY - SLOT* 🍀\n🎰 *SLOTS*\n\n${x[0]} : ${y[0]} : ${z[0]} : ${x[1]} : ${y[1]} : ${z[1]}\n${x[2]} : ${y[2]} : ${z[2]} 
+        `🍀 *CURIOSITY - SLOT* 🍀
+        
+        🎰 *SLOTS*
+        
+       ${x[0]} : ${y[0]} : ${z[0]}
+       ${x[1]} : ${y[1]} : ${z[1]}
+       ${x[2]} : ${y[2]} : ${z[2]}
+       
 ${end}`) 
 }
 handler.help = ['slot <apuesta>']
@@ -71,4 +78,4 @@ function msToTime(duration) {
     seconds = (seconds < 10) ? "0" + seconds : seconds
 
     return seconds + " Segundo(s)"
-}
+         }
