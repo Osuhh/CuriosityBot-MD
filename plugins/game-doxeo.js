@@ -1,10 +1,10 @@
 import { performance } from 'perf_hooks'
 let handler = async (m, { conn, text }) => {
 if (!text) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
-  let who
-  if (m.isGroup) who = m.mentionedJid[0]
-  else who = m.chat
-  if (!who) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
+let who
+if (m.isGroup) who = m.mentionedJid[0]
+else who = m.chat
+if (!who) throw "*⚠️ INGRESA EL @tag DE ALGUN USUARIO*"
 let start = `*⚠️ EMPEZANDO DOXEO ⚠️*`
 let boost = `*${pickRandom(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'])}%*`
 let boost2 = `*${pickRandom(['21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'])}%*`
