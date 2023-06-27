@@ -12,15 +12,13 @@ let handler = async (m, { conn }) => {
     let str = `
 . . . *🔰 P E R F I L 🔰* . . .
 💌 • *Nombre:* ${username} 
-🎐 • *Username:* ${registered ? name : ''}
 📧 • *Tag:* @${who.replace(/@.+/, '')}
 📞 • *Numero:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 🔗 • *Link:* https://wa.me/${who.split`@`[0]}
 🎨 • *Edad:* ${registered ? age : ''}
-🌟 • *Premium:* ${premium ? "✅" :"❌"}
-⏰ • *PremiumTime:* 
-${clockString(user.premiumTime)}
+💎 • *Limite: ${limit} Usos
 📑 • *Registrado:* ${registered ? '✅': '❌'}
+🌟 • *Premium:* ${premium ? "✅\n⏰ • *PremiumTime:* ${clockString(user.premiumTime)}" :"❌"}
 `.trim()
   //m.react(🌟) 
  conn.sendFile(m.chat, pp, 'perfil.jpg', str, fkon, false, { mentions: [who] })
