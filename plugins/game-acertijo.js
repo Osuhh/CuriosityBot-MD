@@ -9,15 +9,15 @@ conn.reply(m.chat, '*⚠️ TODAVÍA HAY UN ACERTIJO SIN RESPONDER EN ESTE CHAT*
 throw false
 }
 let tekateki = JSON.parse(fs.readFileSync(`./src/game/acertijo.json`))
-m.react('🤓') 
+m.react('🤔') 
 await conn.sendPresenceUpdate('composing', m.chat)
 let json = tekateki[Math.floor(Math.random() * tekateki.length)]
 let _clue = json.response
 let clue = _clue.replace(/[A-Za-z]/g, '_')
 let caption = `
 🥏 *${json.question}*
-*⏰ Tiempo:* ${(timeout / 1000).toFixed(2)} segundos
-*🍏 Bono:* +${poin} Exp
+*Tiempo:* ${(timeout / 1000).toFixed(2)} segundos
+*Bono:* +${poin} Exp
 `.trim()
 conn.tekateki[id] = [
 await conn.reply(m.chat, caption, m), json, 
