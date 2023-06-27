@@ -3,7 +3,7 @@ let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status
 let minar = `🌟✨ Genial obtienes`
 let pp = 'https://us.123rf.com/450wm/emojiimage/emojiimage1802/emojiimage180200332/95468325-mont%C3%B3n-de-piedras-preciosas-diamantes-azules-brillantes-concepto-de-joyas-caras-s%C3%ADmbolo-de-riqueza-d.jpg?ver=6'
 
-let d = Math.floor(Math.random() * 35)
+let d = Math.floor(Math.random() * 20)
 global.db.data.users[m.sender].diamond += d * 1  
 let time = global.db.data.users[m.sender].lastdiamantes + 600000
 if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*⏰ Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`  
