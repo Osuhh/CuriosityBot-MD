@@ -72,6 +72,23 @@ throw false
 }}
 chat.antiLink2 = isEnable 
 break
+case 'antitraba':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.antitraba = isEnable
+      break 
+case 'antitoxic':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.antiToxic = isEnable
+break
 case 'modohorny':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -188,6 +205,10 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 ➵ _${usedPrefix}disable *antilink2*_
 ➵ _${usedPrefix}enable *antifake*_
 ➵ _${usedPrefix}disable *antifake*_
+➵ _${usedPrefix}enable *antitraba*_
+➵ _${usedPrefix}disable *antitraba*_
+➵ _${usedPrefix}enable *antitoxic*_
+➵ _${usedPrefix}disable *antitoxic*_
 ➵ _${usedPrefix}enable *detect*_
 ➵ _${usedPrefix}disable *detect*_
 ➵ _${usedPrefix}enable *restrict*_
