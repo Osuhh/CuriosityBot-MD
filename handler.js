@@ -124,6 +124,7 @@ export async function handler(chatUpdate) {
                     chat.viewonce = true
                 if (!('onlyLatinos' in chat))
                     chat.onlyLatinos = false
+                    if (!('modoadmin' in chat)) chat.modoadmin = false   
                  if (!('nsfw' in chat))
                     chat.nsfw = true
                 if (!isNumber(chat.expired))
@@ -144,6 +145,7 @@ export async function handler(chatUpdate) {
                     viewonce: true,
                     useDocument: false,
                     onlyLatinos: false,
+                    modoadmin: false,
                     nsfw: true, 
                     expired: 0,
                 }
@@ -311,6 +313,9 @@ export async function handler(chatUpdate) {
                     if (name != 'owner-unbanuser.js' && user?.banned)
                         return
                 }
+                let adminMode = global.db.data.chats[m.chat].modoadmin
+                let gata = `${plugins.botAdmin || plugins.admin || plugins.group || plugins || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugins.command}`
+                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && gata) return 
                 if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { // Both Owner
                     fail('owner', m, this)
                     continue
