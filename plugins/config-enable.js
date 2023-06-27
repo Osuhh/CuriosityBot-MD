@@ -20,6 +20,21 @@ throw false
 }
 chat.welcome = isEnable
 break
+case 'autolevelup':
+case 'levelup':
+    isUser = true
+     user.autolevelup = isEnable
+     break
+case 'simsimi':
+case 'simi':
+case 'chatbot':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.simi = isEnable
+break   
 case 'detect':
 if (!m.isGroup) {
 if (!isOwner) {
@@ -159,6 +174,14 @@ case 'sololatinos':
       }
       chat.onlyLatinos = isEnable
       break
+case 'modoadmin':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.modoadmin = isEnable          
+break    
 case 'pconly':
 case 'privateonly':
 isAll = true
@@ -209,6 +232,10 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 ➵ _${usedPrefix}disable *antitraba*_
 ➵ _${usedPrefix}enable *antitoxic*_
 ➵ _${usedPrefix}disable *antitoxic*_
+➵ _${usedPrefix}enable *autolevelup*_
+➵ _${usedPrefix}disable *autolevelup*_
+➵ _${usedPrefix}enable *simi*_
+➵ _${usedPrefix}disable *simi*_
 ➵ _${usedPrefix}enable *detect*_
 ➵ _${usedPrefix}disable *detect*_
 ➵ _${usedPrefix}enable *restrict*_
@@ -219,7 +246,9 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 ➵ _${usedPrefix}disable *gconly*_
 ➵ _${usedPrefix}enable *autoread*_
 ➵ _${usedPrefix}disable *autoread*_
-➵ _${usedPrefix}enable *modejadibot*_
+➵ _${usedPrefix}enable *autoread*_
+➵ _${usedPrefix}disable *modoadmin*_
+➵ _${usedPrefix}enable *modoadmin*_
 ➵ _${usedPrefix}disable *modejadibot*_
 `, fkontak, m)
 throw false
