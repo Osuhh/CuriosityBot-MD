@@ -61,6 +61,7 @@ reportError(e)}
 }}
   
 handler.command = /^(facebook|fb|facebookdl|fbdl)$/i
+handler.diamond = true
 export default handler
   
 function checkMessageType(url) {
