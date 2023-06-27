@@ -1,4 +1,3 @@
-//import db from '../lib/database.js'
 let reg = 40
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let fa = `
@@ -12,12 +11,12 @@ Cuanto quieres apostar?
     let users = global.db.data.users[m.sender]
     let time = users.lastslot + 10000
     if (new Date - users.lastslot < 10000) throw `⏳ Espere *${msToTime(time - new Date())}* para usar de nuevo`
-    if (apuesta < 100) throw '✳️ Mínimo de la apuesta es *100 XP*'
+    if (apuesta < 100) throw '*⚠️ Mínimo de la apuesta es 100 XP*'
     if (users.exp < apuesta) {
-        throw `✳️ No tienes suficiente *XP*`
+        throw `*⚠️ No tienes suficiente XP*`
     }
 
-    let emojis = ["🕊️", "🦀", "🦎"];
+    let emojis = ["🎁", "💎", "🌟"];
     let a = Math.floor(Math.random() * emojis.length);
     let b = Math.floor(Math.random() * emojis.length);
     let c = Math.floor(Math.random() * emojis.length);
