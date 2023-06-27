@@ -3,7 +3,7 @@ import TicTacToe from '../lib/tictactoe.js'
 let handler = async (m, { conn, usedPrefix, command, text }) => {
     conn.game = conn.game ? conn.game : {}
     if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw `✳️ Todavía estás en el juego para reiniciar la session escribe : *${usedPrefix}delttt*`
-    if (!text) throw `✳️ Ponga un nombre a la sala`
+    if (!text) throw `*⚠️ Ponga un nombre a la sala*`
     let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     // m.reply('[WIP Feature]')
     if (room) {
@@ -36,7 +36,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 ├❥ᰰຼ ${arr.slice(6).join('')}
 *╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*        
 
-╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${vs} ░⃟⃜🐾⁩」
+╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${cb} ░⃟⃜🐾⁩」
 ├❥ᰰຼ *SALA ID* ${room.id}
 ├❥ᰰຼ ▢ *Reglas*
 ├❥ᰰຼ Haz 3 filas de símbolos verticales, horizontales o diagonales para ganar
@@ -58,7 +58,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
         }
         if (text) room.name = text
         
-     conn.reply(m.chat, `╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${vs} ░⃟⃜🐾⁩」\n├❥ᰰຼ ⏳ *Esperando pareja*\n├❥ᰰຼ Escriba el siguiente comando para aceptar\n├❥ᰰຼ *${usedPrefix + command} ${text}*\n├❥ᰰຼ 🎁 Recompensa: *4999 XP*\n*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*`, m, {
+     conn.reply(m.chat, `╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${cb} ░⃟⃜🐾⁩」\n├❥ᰰຼ ⏳ *Esperando pareja*\n├❥ᰰຼ Escriba el siguiente comando para aceptar\n├❥ᰰຼ *${usedPrefix + command} ${text}*\n├❥ᰰຼ 🎁 Recompensa: *4999 XP*\n*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*`, m, {
             mentions: conn.parseMention(text)
         })
         
