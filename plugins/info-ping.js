@@ -42,18 +42,20 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   let speed = neww - old
   
 let infobt = `
-INFOBOT
+╭─╮─᤻─᳒─᤻᳒「۬〬${vs} ⁩」
+├ *≡ S E R V E R*
+├
+├🛑 *RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+├🔵 *FreeRAM:* ${format(freemem())}
+*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*  
 
-*INFORMACIÓN*
-▢ Chats de grupo: *${groupsIn.length}*
-▢ Gropos unidos *${groupsIn.length}*
-▢ Grupos abandonados *${groupsIn.length - groupsIn.length}* 
-▢ Chats privados *${chats.length - groupsIn.length}* 
-▢ Total Chats *${chats.length}* 
-
- *≡ S E R V E R*
-*🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
-*🔵 FreeRAM:* ${format(freemem())}
+╭─╮─᤻─᳒─᤻᳒「۬〬INFORMACIÓN ⁩」
+├❥ᰰຼ Chats de grupo: *${groupsIn.length}*
+├❥ᰰຼ Gropos unidos *${groupsIn.length}*
+├❥ᰰຼ Grupos abandonados *${groupsIn.length - groupsIn.length}* 
+├❥ᰰຼ Chats privados *${chats.length - groupsIn.length}* 
+├❥ᰰຼ Total Chats *${chats.length}* 
+*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*  
 
 *≡  NodeJS Uso de memoria*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
