@@ -12,18 +12,18 @@ let handler = async (m, {conn, text, usedPrefix, command, groupMetadata}) => {
     if (global.db.data.users[_user] == undefined) return m.reply(`➳ El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`);
     let uuser = global.db.data.users[_user];
     let exp = Math.floor(Math.random() * 15) + 10;
-    let limit = Math.floor(Math.random() * 5) + 3;
+    let diamond = Math.floor(Math.random() * 5) + 3;
     let raid = `*ʜᴀs sᴀǫᴜᴇᴀᴅᴏ ⚔️ ᴀ @${_user.split("@s.whatsapp.net")[0]}*
 ◦ ᴇxᴘ: ${exp}
-◦ ᴅɪᴀᴍᴀɴᴛᴇ: ${limit}
+◦ ᴅɪᴀᴍᴀɴᴛᴇ: ${diamond}
 
 ʀᴏʙᴀᴅᴏ ᴘᴏʀ: @${m.sender.split("@")[0]}`;
-    if (uuser.limit <= 5) return m.reply("El usuario no tiene suficientes recursos!");
+    if (uuser.diamond <= 5) return m.reply("El usuario no tiene suficientes recursos!");
     if (uuser.exp <= 10) return m.reply(`El usuario no tiene suficientes recursos!`);
     global.db.data.users[_user].exp -= exp * 1;
-    global.db.data.users[_user].limit -= limit * 1;
+    global.db.data.users[_user].diamond -= diamond * 1;
     global.db.data.users[m.sender].exp += exp * 1;
-    global.db.data.users[m.sender].limit += limit * 1;
+    global.db.data.users[m.sender].diamond += diamond * 1;
     await await conn.sendMessage(m.chat, {text: raid, mentions: [_user, m.sender]}, {quoted: m});
     /*conn.sendMessage(
     _user,
