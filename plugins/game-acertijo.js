@@ -9,15 +9,16 @@ conn.reply(m.chat, 'Todavía hay acertijos sin responder en este chat', conn.tek
 throw false
 }
 let tekateki = JSON.parse(fs.readFileSync(`./src/game/acertijo.json`))
+m.react('🤔') 
+await conn.sendPresenceUpdate('composing', m.chat)
 let json = tekateki[Math.floor(Math.random() * tekateki.length)]
 let _clue = json.response
 let clue = _clue.replace(/[A-Za-z]/g, '_')
-m.react('🤔') 
-let caption = `╭─╮─᤻─᳒─᤻᳒「░⃟⃜🍭ꪳ۫₎۬〬${wm} ░⃟⃜🐾⁩」
-ⷮ├❥ᰰຼ *${json.question}*
-├❥ᰰຼ *Tiempo:* ${(timeout / 1000).toFixed(2)} segundos
-├❥ᰰຼ *Bono:* +${poin} Exp
-*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*`.trim()
+let caption = `
+ⷮ *${json.question}*
+*• Tiempo:* ${(timeout / 1000).toFixed(2)} segundos
+*• Bono:* +${poin} Exp
+`.trim()
 conn.tekateki[id] = [
 await conn.reply(m.chat, caption, m), json, 
 poin,
@@ -29,4 +30,5 @@ handler.help = ['acertijo']
 handler.tags = ['game']
 handler.command = /^(acertijo|acert|pregunta|adivinanza|tekateki)$/i
 handler.register = true
+
 export default handler
