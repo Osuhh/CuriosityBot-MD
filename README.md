@@ -80,7 +80,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 #### COLABORADORES 
 <a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![elrebelde21](https://github.com/ufdefinido.png?size=100)](https://github.com/ufdefinido) 
 ---|---
-[Gata Dios](https://github.com/GataNina-Li)  | [elrebelde21](https://github.com/undefinidoo)
+[Gata Dios](https://github.com/GataNina-Li)  | [ufdefinido](https://github.com/undefinidoo)
 Colaboradora | Colaborador |
 
 ##### AGRADECIMIENTO ESPECIAL PARA
