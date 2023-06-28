@@ -2,7 +2,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     conn.math = conn.math ? conn.math : {}
     m.react('🤓') 
     if (args.length < 1) throw `
-*「 CURIOSITY - MATEMÁTICAS ⁩」*
+*CURIOSITY - MATEMÁTICAS*
 🧮 Dificultades disponibles : 
 
 ${Object.keys(modes).join(' | ')} 
@@ -11,7 +11,7 @@ _Ejemplo : ${usedPrefix+command} normal_
 `.trim()
   let mode = args[0].toLowerCase()
   if (!(mode in modes)) throw `
-*「 CURIOSITY - MATEMÁTICAS ⁩」*
+*CURIOSITY - MATEMÁTICAS *
 🧮 Dificultades disponibles : 
   
 ${Object.keys(modes).join(' | ')} 
