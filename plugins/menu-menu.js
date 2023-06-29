@@ -18,7 +18,7 @@ let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
 let name = conn.getName(m.sender)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-let { exp, limit, level, role, money } = global.db.data.users[m.sender]
+let { exp, diamond, level, role, money } = global.db.data.users[m.sender]
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
