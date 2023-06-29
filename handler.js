@@ -360,7 +360,7 @@ export async function handler(chatUpdate) {
                     m.reply('chirrido -_-') // Hehehe
                 else
                     m.exp += xp
-                if (!isPrems && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
+                if (!isPrems && plugin.limit && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
                     this.reply(m.chat, `No tiene diamantes 💎`, m)
                     continue // Limit habis
                 }
@@ -410,7 +410,7 @@ export async function handler(chatUpdate) {
                                 if (data.exists) //Reporte enviado al grupo
  await conn.reply(res, `*[ ⚠️ COMANDO FALLANDO ⚠️ ]*\n\n*📑 PLUGIN :* ${m.plugin}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n`)
  
- m.reply(`*[ ⚠️ COMANDO FALLANDO ⚠️ ]*\n\n*📑 PLUGIN :* ${m.plugin}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n`.trim(), data.jid)  //reporte enviado al propietario al privado          
+ m.reply(`*[ ⚠️ COMANDO FALLANDO ⚠️ ]*\n\n*📑 PLUGIN :* ${m.plugin}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n`.trim(), data.jid)  //reporte enviado al privado del propietario  
                             }
                         m.reply(text)
                     }
@@ -482,7 +482,7 @@ export async function handler(chatUpdate) {
 	let settingsREAD = global.db.data.settings[this.user.jid] || {}  
         if (opts['autoread']) await this.readMessages([m.key])
 	if (settingsREAD.autoread2) await this.readMessages([m.key])  
-	this.sendPresenceUpdate('composing', m.chat)  
+	//this.sendPresenceUpdate('composing', m.chat)  
 	//if (settingsREAD.autoread2 == 'true') await this.readMessages([m.key])    
         
     }
