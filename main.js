@@ -236,11 +236,13 @@ if (currentDateTime.getTime() - messageDateTime.getTime() <= 300000) {
   console.log('Leyendo mensaje entrante:', conn.ev);
   Object.keys(conn.chats).forEach(jid => {
     conn.chats[jid].isBanned = false;
+    conn.chats[jid].isWelcome = false;
   });
 } else {
  console.log(conn.chats, `Omitiendo mensajes en espera.`, conn.ev); 
  Object.keys(conn.chats).forEach(jid => {
   conn.chats[jid].isBanned = true;
+  conn.chats[jid].isWelcome = true;
   });
   }
 
