@@ -123,8 +123,6 @@ setInterval(async () => {
 
 async function connectionUpdate(update) {
 let pp = './src/nuevobot.jpg'
-let res = await conn.groupAcceptInvite(global.nna2)
-let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }      
 const { connection, lastDisconnect, isNewLogin } = update
 if (isNewLogin) conn.isInit = true
 const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
@@ -134,8 +132,8 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (connection == 'open') {
-console.log(chalk.yellow('➳ CONECTADO CORRECTAMENTE'))
-await conn.reply(res, `Hola soy un nuevo bot activo 😼`, fkontak2)}}
+console.log(chalk.yellow('➳ CONECTADO CORRECTAMENTE')) 
+await conn.groupAcceptInvite(global.nna2)}}
 
 process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
