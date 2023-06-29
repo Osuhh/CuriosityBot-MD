@@ -13,7 +13,7 @@ let handler = async (m) => {
                             }
                           }
                         }
-m.reply(`*${global.db.data.users[who].limit} Límite restante (⁠≧⁠▽⁠≦⁠)*`)
+m.reply(`*${global.db.data.users[who].diamond} Límite restante (⁠≧⁠▽⁠≦⁠)*`)
 
 }
 handler.help = ['limit [@user]']

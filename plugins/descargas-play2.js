@@ -70,7 +70,7 @@ if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n
 handler.command = handler.help = ['play2', 'playvideo']
 handler.tags = ['downloader']
 handler.exp = 0
-handler.limit = true
+handler.diamond = true 
 handler.premium = false
 export default handler
 async function cut(url) {

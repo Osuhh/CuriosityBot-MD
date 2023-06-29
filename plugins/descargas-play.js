@@ -71,7 +71,7 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
 handler.command = handler.help = ['play','song','youtube','ytmp3','ds','downloadyt','yta'];
 handler.tags = ['downloader'];
 handler.exp = 0;
-handler.limit = true;
+handler.diamond = true
 handler.premium = false;
 export default handler
 async function cut(url) {

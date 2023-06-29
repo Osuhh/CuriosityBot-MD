@@ -76,7 +76,7 @@ let menu = `*❏──── 「 MENU 」 ────❏*
 *Nombre:* ${name}
 *Nivel:* ${level}
 *Exp:* ${exp}
-*Limite:* ${limit}
+*Limite:* ${diamond}
 
 *H O Y*
 *Fecha:* ${date}
