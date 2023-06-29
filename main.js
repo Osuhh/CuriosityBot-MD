@@ -1,25 +1,27 @@
+//test
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-import './config.js'; 
-
-import { createRequire } from "module"; // Bring in the ability to create the 'require' method
+import './config.js';
+//import './api.js';
+import { createRequire } from "module"; 
 import path, { join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
 import { platform } from 'process'
 import * as ws from 'ws';
-import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync } from 'fs';
+import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch } from 'fs';
 import yargs from 'yargs';
 import { spawn } from 'child_process';
 import lodash from 'lodash';
-import chalk from 'chalk'
+import chalk from 'chalk';
 import syntaxerror from 'syntax-error';
 import { tmpdir } from 'os';
 import { format } from 'util';
+import P from 'pino';
+import pino from 'pino';
 import { makeWASocket, protoType, serialize } from './lib/simple.js';
 import { Low, JSONFile } from 'lowdb';
-import pino from 'pino';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
 import store from './lib/store.js'
-const { DisconnectReason, useMultiFileAuthState } = await import('@adiwajshing/baileys')
+const { DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion } = await import('@adiwajshing/baileys')
 const { CONNECTING } = ws
 const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
@@ -27,103 +29,147 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 protoType()
 serialize()
 
-global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) } 
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
-// global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
-global.timestamp = {
-  start: new Date
-}
+
+global.timestamp = { start: new Date }
+global.videoList = [];
+global.videoListXXX = [];
 
 const __dirname = global.__dirname(import.meta.url)
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-.@aA').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
-// global.opts['db'] = process.env['db']
-
-global.db = new Low(
-  /https?:\/\//.test(opts['db'] || '') ?
-    new cloudDBAdapter(opts['db']) : /mongodb(\+srv)?:\/\//i.test(opts['db']) ?
-      (opts['mongodbv2'] ? new mongoDBV2(opts['db']) : new mongoDB(opts['db'])) :
-      new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)
-)
-
+global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`))
 
 global.DATABASE = global.db // Backwards Compatibility
 global.loadDatabase = async function loadDatabase() {
-  if (global.db.READ) return new Promise((resolve) => setInterval(async function () {
-    if (!global.db.READ) {
-      clearInterval(this)
-      resolve(global.db.data == null ? global.loadDatabase() : global.db.data)
-    }
-  }, 1 * 1000))
-  if (global.db.data !== null) return
-  global.db.READ = true
-  await global.db.read().catch(console.error)
-  global.db.READ = null
-  global.db.data = {
-    users: {},
-    chats: {},
-    stats: {},
-    msgs: {},
-    sticker: {},
-    settings: {},
-    ...(global.db.data || {})
-  }
-  global.db.chain = chain(global.db.data)
+if (global.db.READ) return new Promise((resolve) => setInterval(async function () {
+if (!global.db.READ) {
+clearInterval(this)
+resolve(global.db.data == null ? global.loadDatabase() : global.db.data)
+}
+}, 1 * 1000))
+if (global.db.data !== null) return
+global.db.READ = true
+await global.db.read().catch(console.error)
+global.db.READ = null
+global.db.data = {
+users: {},
+chats: {},
+stats: {},
+msgs: {},
+sticker: {},
+settings: {},
+...(global.db.data || {})
+}
+global.db.chain = chain(global.db.data)
 }
 loadDatabase()
 
-//-- SESSION
-//global.authFile = `${opts._[0] || 'session'}.data.json`
-//const { state, saveState } = store.useSingleFileAuthState(global.authFile)
 global.authFile = `sessions`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
+const msgRetryCounterMap = MessageRetryMap => { }
+let { version } = await fetchLatestBaileysVersion();
 
 const connectionOptions = {
-  printQRInTerminal: true,
-  auth: state,
-  logger: pino({ level: 'silent'}),
-  browser: ['CuriosityBot-MD','Safari','1.0.0']
+printQRInTerminal: true,
+patchMessageBeforeSending: (message) => {
+const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage );
+if (requiresPatch) { message = { viewOnceMessage: { message: { messageContextInfo: { deviceListMetadataVersion: 2, deviceListMetadata: {}, }, ...message, },},};}
+return message;},
+getMessage: async (key) => {
+if (store) {
+const msg = await store.loadMessage(key.remoteJid, key.id)
+return msg.message || undefined }
+return { conversation: "hello, i'm CuriosityBot-MD" }},   
+msgRetryCounterMap,
+logger: pino({ level: 'silent' }),
+auth: state,
+browser: ['CuriosityBot-MD','Safari','1.0.0'], 
+version   
 }
 
 global.conn = makeWASocket(connectionOptions)
 conn.isInit = false
 
 if (!opts['test']) {
-  setInterval(async () => {
-    if (global.db.data) await global.db.write().catch(console.error)
-    if (opts['autocleartmp']) try {
-      clearTmp()
-
-    } catch (e) { console.error(e) }
-  }, 60 * 1000)
-}
+if (global.db) setInterval(async () => {
+if (global.db.data) await global.db.write()
+if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "jadibts"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
+}, 30 * 1000)}
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
-
-/* Clear */
-async function clearTmp() {
-  const tmp = [tmpdir(), join(__dirname, './tmp')]
-  const filename = []
-  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
-
-  //---
-  return filename.map(file => {
+       
+function clearTmp() {
+const tmp = [tmpdir(), join(__dirname, './tmp')]
+const filename = []
+tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+return filename.map(file => {
     const stats = statSync(file)
-    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 1)) return unlinkSync(file) // 1 minuto
-    return false
-  })
+    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
+    return false })}
+
+function purgeSession() {
+    let prekey = []
+    let directorio = readdirSync("./sessions")
+    let filesFolderPreKeys = directorio.filter(file => {
+        return file.startsWith('pre-key-')
+    })
+    prekey = [...prekey, ...filesFolderPreKeys]
+    filesFolderPreKeys.forEach(files => {
+    unlinkSync(`./sessions/${files}`)
+})
+
+}  
+function purgeSessionSB() {
+let listaDirectorios = readdirSync('./jadibts/');
+console.log(listaDirectorios)
+      let SBprekey = []
+listaDirectorios.forEach(filesInDir => {
+    let directorio = readdirSync(`./jadibts/${filesInDir}`)
+    console.log(directorio)
+    let DSBPreKeys = directorio.filter(fileInDir => {
+    return fileInDir.startsWith('pre-key-')
+    })
+    SBprekey = [...SBprekey, ...DSBPreKeys]
+    DSBPreKeys.forEach(fileInDir => {
+        unlinkSync(`./jadibts/${filesInDir}/${fileInDir}`) 
+    })
+    })
+    
 }
-setInterval(async () => {
-	var a = await clearTmp()
-	console.log(chalk.cyan(`AUTOCLEAR │ BASURA ELIMINADA`))
-}, 180000) //3 minutos
+
+function purgeOldFiles() {
+const directories = ['./sessions/', './jadibts/']
+const oneHourAgo = Date.now() - (60 * 60 * 1000) 
+directories.forEach(dir => {
+    readdirSync(dir, (err, files) => {
+        if (err) throw err
+        files.forEach(file => {
+            const filePath = path.join(dir, file)
+            stat(filePath, (err, stats) => {
+                if (err) throw err;
+                if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
+                    unlinkSync(filePath, err => {  
+                        if (err) throw err
+                        console.log(`Archivo ${file} borrado con éxito`)
+                    })
+                } else {  
+                    console.log(`Archivo ${file} no borrado`) 
+                } 
+            }) 
+        }) 
+    }) 
+})
+}
 
 async function connectionUpdate(update) {
 let pp = './src/nuevobot.jpg'
 const { connection, lastDisconnect, isNewLogin } = update
+global.stopped = connection    
 if (isNewLogin) conn.isInit = true
 const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
 if (code && code !== DisconnectReason.loggedOut && conn?.ws.readyState !== CONNECTING) {
@@ -131,30 +177,35 @@ console.log(await global.reloadHandler(true).catch(console.error))
 global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
+if (update.qr != 0 && update.qr != undefined) {
+console.log(chalk.yellow('🚩 Escanea este codigo QR,\nEl QR expira en 45 segundos.'))
+}
 if (connection == 'open') {
-console.log(chalk.yellow('➳ CONECTADO CORRECTAMENTE')) 
-await conn.groupAcceptInvite(global.nna2)}}
+console.log(chalk.yellow('➳ CONECTADO CORRECTAMENTE'))
+await conn.groupAcceptInvite(global.nna2)}
+if (connection == 'close') {
+console.log(chalk.yellow(`🚩ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`))}
+}
 
 process.on('uncaughtException', console.error)
-// let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
 
 let isInit = true;
 let handler = await import('./handler.js')
 global.reloadHandler = async function (restatConn) {
-  try {
-    const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
-    if (Object.keys(Handler || {}).length) handler = Handler
-  } catch (e) {
-    console.error(e)
-  }
-  if (restatConn) {
-    const oldChats = global.conn.chats
-    try { global.conn.ws.close() } catch { }
-    conn.ev.removeAllListeners()
-    global.conn = makeWASocket(connectionOptions, { chats: oldChats })
-    isInit = true
-  }
-  if (!isInit) {
+try {
+const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
+if (Object.keys(Handler || {}).length) handler = Handler
+} catch (e) {
+console.error(e)
+}
+if (restatConn) {
+const oldChats = global.conn.chats
+try { global.conn.ws.close() } catch { }
+conn.ev.removeAllListeners()
+global.conn = makeWASocket(connectionOptions, { chats: oldChats })
+isInit = true
+}
+if (!isInit) {
     conn.ev.off('messages.upsert', conn.handler)
     conn.ev.off('group-participants.update', conn.participantsUpdate)
     conn.ev.off('groups.update', conn.groupsUpdate)
@@ -179,7 +230,21 @@ global.reloadHandler = async function (restatConn) {
   //conn.credsUpdate = saveState.bind(global.conn, true)
   conn.credsUpdate = saveCreds.bind(global.conn, true)
 
-  conn.ev.on('messages.upsert', conn.handler)
+const currentDateTime = new Date();
+const messageDateTime = new Date(conn.ev * 1000);
+if (currentDateTime.getTime() - messageDateTime.getTime() <= 300000) {
+  console.log('Leyendo mensaje entrante:', conn.ev);
+  Object.keys(conn.chats).forEach(jid => {
+    conn.chats[jid].isBanned = false;
+  });
+} else {
+ console.log(conn.chats, `Omitiendo mensajes en espera.`, conn.ev); 
+ Object.keys(conn.chats).forEach(jid => {
+  conn.chats[jid].isBanned = true;
+  });
+  }
+
+conn.ev.on('messages.upsert', conn.handler)
   conn.ev.on('group-participants.update', conn.participantsUpdate)
   conn.ev.on('groups.update', conn.groupsUpdate)
   conn.ev.on('message.delete', conn.onDelete)
@@ -188,6 +253,36 @@ global.reloadHandler = async function (restatConn) {
   isInit = false
   return true
 }
+
+/*
+
+const pluginFolder = join(__dirname, './plugins');
+const pluginFilter = filename => /\.js$/.test(filename);
+global.plugins = {};
+
+async function filesInit(folder) {
+  for (let filename of readdirSync(folder).filter(pluginFilter)) {
+    try {
+      let file = join(folder, filename);
+      const module = await import(file);
+      global.plugins[file] = module.default || module;
+    } catch (e) {
+      console.error(e);
+      delete global.plugins[filename];
+    }
+  }
+
+  for (let subfolder of readdirSync(folder)) {
+    const subfolderPath = join(folder, subfolder);
+    if (statSync(subfolderPath).isDirectory()) {
+      await filesInit(subfolderPath);
+    }
+  }
+}
+
+await filesInit(pluginFolder).then(_ => Object.keys(global.plugins)).catch(console.error);
+
+*/
 
 const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
 const pluginFilter = filename => /\.js$/.test(filename)
@@ -234,49 +329,45 @@ global.reload = async (_ev, filename) => {
 Object.freeze(global.reload)
 watch(pluginFolder, global.reload)
 await global.reloadHandler()
-
-// Quick Test
 async function _quickTest() {
-  let test = await Promise.all([
-    spawn('ffmpeg'),
-    spawn('ffprobe'),
-    spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
-    spawn('convert'),
-    spawn('magick'),
-    spawn('gm'),
-    spawn('find', ['--version'])
-  ].map(p => {
-    return Promise.race([
-      new Promise(resolve => {
-        p.on('close', code => {
-          resolve(code !== 127)
-        })
-      }),
-      new Promise(resolve => {
-        p.on('error', _ => resolve(false))
-      })
-    ])
-  }))
-  let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
-  console.log(test)
-  let s = global.support = {
-    ffmpeg,
-    ffprobe,
-    ffmpegWebp,
-    convert,
-    magick,
-    gm,
-    find
-  }
-  // require('./lib/sticker').support = s
-  Object.freeze(global.support)
-
-  if (!s.ffmpeg) conn.logger.warn('\n\n[ IMPORTANTE ] : Por favor instalé el paquete ffmpeg para el envío de archivos multimedia\n[_>] (pkg install ffmpeg)\n\n')
-  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('\n\n[ IMPORTANTE ] : Es posible que los stickers no estén animadas sin libwebp en ffmpeg\n[_>] (pkg install libwebp) ó (--enable-ibwebp while compiling ffmpeg)\n\n')
-  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('\n\n[ IMPORTANTE ] : Es posible que los stickers no funcionen sin imagemagick si libwebp y ffmpeg no esten instalados\n[_>] (pkg install imagemagick)\n\n')
+let test = await Promise.all([
+spawn('ffmpeg'),
+spawn('ffprobe'),
+spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
+spawn('convert'),
+spawn('magick'),
+spawn('gm'),
+spawn('find', ['--version'])
+].map(p => {
+return Promise.race([
+new Promise(resolve => {
+p.on('close', code => {
+resolve(code !== 127)
+})}),
+new Promise(resolve => {
+p.on('error', _ => resolve(false))
+})])}))
+let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
+let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
+Object.freeze(global.support)
 }
-
+setInterval(async () => {
+if (stopped == 'close') return
+var a = await clearTmp()        
+console.log(chalk.cyanBright(`AUTOCLEAR │ BASURA ELIMINADA`))
+}, 180000)//3 minutos
+setInterval(async () => {
+    await purgeSession()
+console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+}, 1000 * 60 * 60)
+setInterval(async () => {
+     await purgeSessionSB()
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+}, 1000 * 60 * 60)
+setInterval(async () => {
+    await purgeOldFiles()
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+}, 1000 * 60 * 60)
 _quickTest()
-  .then(() => conn.logger.info('\n\n[_>] Prueba rápida realizada ✓\n'))
-  .catch(console.error)
-
+.then(() => conn.logger.info(`\n\n[_>] Prueba rápida realizada ✓\n`))
+.catch(console.error)
