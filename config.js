@@ -1,8 +1,15 @@
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
+import fs from 'fs'
 import cheerio from 'cheerio'
-import { fileURLToPath } from 'url'
-import fs from 'fs' 
+import fetch from 'node-fetch'
+import axios from 'axios'
+import path, { join } from 'path'
+import { fileURLToPath, pathToFileURL } from 'url'
+import moment from 'moment-timezone' 
+import { platform } from 'process'
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
+const __dirname = global.__dirname(import.meta.url)
 
 //⊱ ━━━━━.⋅ Owner ⋅.━━━━ ⊰
 global.owner = [
@@ -12,6 +19,7 @@ global.owner = [
   ['50258115623']]  
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
+global.animxscans = [['56962237366', 'CuriosityBot-MD', true]]
 global.suittag = ['59894808483'] 
 global.mods = [] 
 global.prems = []
@@ -79,11 +87,22 @@ global.APIKeys = { // APIKey Here
 }
 
 // IMAGENES 
-global.imagen1 = fs.readFileSync('./storage/menus/Menu1.jpg')
-global.imagen2 = fs.readFileSync('./storage/menus/Menu2.jpg')
-global.imagen3 = fs.readFileSync('./storage/menus/Menu3.jpg')
-global.imagen4 = fs.readFileSync('./storage/menus/Menu4.jpg')
+global.raiz = './'
+global.aniD = 'ANI_MX_SCANS/'
+global.dirP = raiz//+aniD
+global.media = raiz+'media/'
+global.jadibts = join(__dirname, 'jadibts/')
+global.imagen1 = fs.readFileSync(join(dirP,`storage/menus/Menu1.jpg`))
+global.imagen2 = fs.readFileSync(join(dirP,`src/nuevobot.jpg`)) 
+global.imagen3 = fs.readFileSync(join(dirP,`src/Pre Bot Publi.png`))
+global.imagen4 = fs.readFileSync(join(dirP,`storage/menus/Menu2.jpg`))
+global.stickerAMX = fs.readFileSync(join(dirP,`src/Curiosity.webp`))
+global.imagen5 = fs.readFileSync('./storage/menus/Menu1.jpg')
+global.imagen6 = fs.readFileSync('./storage/menus/Menu2.jpg')
+global.imagen7 = fs.readFileSync('./storage/menus/Menu3.jpg')
+global.imagen8 = fs.readFileSync('./storage/menus/Menu4.jpg')
 global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
+
 //⊱ ━━━━━.⋅ Sticker WM ⋅.━━━━ ⊰
 
 global.packname = 'CuriosityBot-MD.js'
