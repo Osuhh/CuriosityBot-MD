@@ -27,6 +27,10 @@ conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
   m.reply(te, m.sender)
 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
    } 
+   if (m.sender.startsWith('234')) {
+  m.reply(te, m.sender)
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+   } 
    if (m.sender.startsWith('967')) {
   m.reply(te, m.sender)
 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
