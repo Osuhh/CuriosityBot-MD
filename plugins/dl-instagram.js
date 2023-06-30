@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     m.reply('Calmao 😎\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor')
     let res = await fg.igdl(args[0])
     for (let result of res.url_list) {
-    conn.sendFile(m.chat, result, 'igdl.mp4', `『 Resultado 』`, m)
+    conn.sendFile(m.chat, result, 'igdl.mp4', `? Resultado`, m)
     m.react(done)
   }
 }
