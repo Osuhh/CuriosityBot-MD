@@ -10,16 +10,7 @@ export async function before(m, { conn }) {
         user.level++
     user.role = global.rpg.role(user.level).name
     if (before !== user.level) {
-    m.reply(`*「 FELICIDADES LEVEL UP 🆙🥳 」*\n\nFelicidades subiste de nivel sigue asi 👏\n\n☞ NIVEL ANTERIOR: ${before}\n☞ NIVEL ACTUAL: ${user.level}\n☞ RANGO : ${user.role}\n☞ FECHA: ${new Date().toLocaleString('id-ID')}\n\n\n_*Para ver tu XP en tiempo real coloca el comando #level*_`.trim())
-   /* conn.sendButton(m.chat, '🤑 ' + wm, `╭━─━─━─≪🔆≫─━─━─━╮
-│☞ FELICIDADES 👏 HAS ALCANZADO UN NUEVO NIVEL
-│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│☞ NIVEL ANTERIOR: ${before}
-│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│☞ NIVEL ACTUAL: ${user.level}
-│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│☞ RANGO : ${user.role}
-│◤━━━━━ ☆. ∆ .☆ ━━━━━◥
-│☞ FECHA: ${new Date().toLocaleString('id-ID')}
-╰━─━─━─≪🔆≫─━─━─━╯ׂ`, null, [['✳️MENU', `/menu`]], m)*/
-}}		
+        m.reply(`*「 FELICIDADES LEVEL UP 🆙🥳 」*\n\nFelicidades subiste de nivel sigue asi 👏\n\n☞ NIVEL ANTERIOR: ${before}\n☞ NIVEL ACTUAL: ${user.level}\n☞ RANGO : ${user.role}\n☞ FECHA: ${new Date().toLocaleString('id-ID')}\n\n\n_*Para ver tu XP en tiempo real coloca el comando #level*_`.trim())
+    }
+}
+
