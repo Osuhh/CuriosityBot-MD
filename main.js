@@ -357,7 +357,7 @@ setInterval(async () => {
 if (stopped == 'close') return
 var a = await clearTmp()        
 console.log(chalk.cyanBright(`AUTOCLEAR │ BASURA ELIMINADA`))
-}, 180000)//3 minutos
+}, 60000)//1 minutos
 setInterval(async () => {
     await purgeSession()
 console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
