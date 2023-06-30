@@ -1,19 +1,14 @@
-
-import fg from 'api-dylux'
-
+let instagramGetUrl = require('instagram-url-direct')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `·˚ ༘₊· ͟͟͞͞꒰➳ 𝚄𝚜𝚘 𝚍𝚎𝚕 𝚌𝚘𝚖𝚊𝚗𝚍𝚘\n𝙴𝚓𝚎𝚖𝚙𝚕𝚘: *${usedPrefix + command}* https://www.instagram.com/p/CYHeKxyMj-J/?igshid=YmMyMTA2M2Y=`
-    m.react(rwait)
-    m.reply('Calmao 😎\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor')
-    let res = await fg.igdl(args[0])
-    for (let result of res.url_list) {
-    conn.sendFile(m.chat, result, 'igdl.mp4', `? Resultado`, m)
-    m.react(done)
-  }
+    if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.instagram.com/p/ByxKbUSnubS/?utm_source=ig_web_copy_link`
+    const results = (await instagramGetUrl(args[0])).url_list[0]
+
+    conn.sendFile(m.chat, results, 'ig.mp4', `*Instagram Downloader*`, m)
 }
-handler.help = ['instagram <link ig>']
-handler.tags = ['dl']
-handler.command = ['ig', 'igdl', 'instagram', 'igimg', 'igvid'] 
+handler.help = ['ig'].map(v => v + ' <url>')
+handler.tags = ['downloader']
+
+handler.command = /^(Instagram|ig|igdl)$/i
 handler.diamond = true
 
 export default handler 
