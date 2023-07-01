@@ -77,6 +77,8 @@ let menu = `╭━━━〔 M E N U ⁩〕━━━┈⊷
 ┃★│ *Nivel:* ${level}
 ┃★│ *Exp:* ${exp}
 ┃★│ *Límites:* ${diamond}
+┃★╰────────────── 
+╰━━━━━━━━━━━━━━━┈⊷
 
 *H O Y*
 *Fecha:* ${date}
