@@ -74,7 +74,7 @@ let menu = `╭━━━━━═[ INFO BOT ]═━━━━━⋆
 ┃★╭──────────────
 ┃★│ *Creador:* ${azami}
 ┃★│ *Dueño:* wa.me/59894808483
-┃★│ *Bot ofc:* wa.me/56962237366
+┃★│ *Bot:* wa.me/56962237366
 ┃★│ *Tiempo activo:* ${uptime}
 ┃★│ *Usuarios:* ${rtotalreg}
 ┃★╰────────────── 
