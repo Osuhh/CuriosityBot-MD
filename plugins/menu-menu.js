@@ -1,4 +1,4 @@
-//CÓDIGO ADAPTADO POR https://github.com/GataNina-Li ┬ | @gata_dios & https://github.com/Azami19 | @Azami
+//CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios & https://github.com/Azami19 | @Azami
 
 import fs from 'fs'
 import fetch from 'node-fetch'
@@ -73,15 +73,21 @@ m.react('🚀')
 let menu = `╭━━━〔 M E N U ⁩〕━━━┈⊷
 ┃★╭──────────────
 ┃★│ *I N F O*
-
-┃★╭──────────────
-┃★│ *U S U A R I O*
-┃★│ *Nombre:* ${name}
-┃★│ *Nivel:* ${level}
-┃★│ *Exp:* ${exp}
-┃★│ *Límites:* ${diamond}
+┃★│ *Creador:* ${azami}
+┃★│ *Número:* 
+┃★│ *Bot oficial:*
+┃★│ *Tiempo activo:* ${uptime}
+┃★│ *Usuarios:* ${rtotalreg}
 ┃★╰────────────── 
-╰━━━━━━━━━━━━━━━┈⊷
+╰┬━━━━━━━━━━━━━━━┈⊷
+ ┃★╭──────────────
+ ┃★│ *U S U A R I O*
+ ┃★│ *Nombre:* ${name}
+ ┃★│ *Nivel:* ${level}
+ ┃★│ *Exp:* ${exp}
+ ┃★│ *Límites:* ${diamond}
+ ┃★╰────────────── 
+ ╰━━━━━━━━━━━━━━━┈⊷
 
 *H O Y*
 *Fecha:* ${date}
