@@ -70,9 +70,9 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
 m.react('🚀')     
-let menu = `╭━━━〔 M E N U ⁩〕━━━┈⊷
+let menu = `•───「 M E N U 」───•
+╭─────═[ INFO BOT ]═─────⋆
 ┃★╭──────────────
-┃★│ *I N F O*
 ┃★│ *Creador:* ${azami}
 ┃★│ *Número:* 
 ┃★│ *Bot oficial:*
