@@ -19,7 +19,8 @@ let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: '
 let name = conn.getName(m.sender)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let { exp, diamond, level, role, money } = global.db.data.users[m.sender]
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
+let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 
@@ -81,17 +82,16 @@ let menu = `╔═══「 *U S U A R I O* 」═══╗
 ╔═══「 *I N F O B O T* 」═══╗
 ║ *⫹⫺ CREADOR:* ${azami}
 ║ *⫹⫺ DUEÑO:* wa.me/59894808483
-〬║ *⫹⫺ BOT OFC:* wa.me/${animxscans}
-〬║ *⫹⫺ USUARIOS:* ${rtotalreg}
+〬║ *⫹⫺ ${(conn.user.jid == global.conn.user.jid ? '' : `Jadibot de :* https://wa.me/${global.conn.user.jid.split`@`[0]}`) || 'BOT OFC :* wa.me/56962237366'}
 〬║ *⫹⫺ PREFIX :* ${usedPrefix}
 〬║ *⫹⫺ ACTIVIDAD :* ${uptime}
-〬║ *⫹⫺ REGISTRADOS :* ${rtotalreg}
+〬║ *⫹⫺ REGISTRADOS :* ${rtotalreg} de ${totalreg} usuarios
 ╚════ ≪ •❈• ≫ ════╝
 
 〬╔════「 H O Y 」════╗
 ║ *⫹⫺ FECHA :* ${date}
-〬╚════ ≪ •❈• ≫ ════╝
-
+〬╚════ ≪ •❈• ≫ ═════
+   
 〬╔══「 I N F O R M A C I Ó N 」═╗
 〬║ႌ〬⫹⫺ ${usedPrefix}estado
 ║ႌ〬⫹⫺ ${usedPrefix}owner
