@@ -70,7 +70,7 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
 m.react('🚀')     
-let menu = `╭━( CuriosityBot-MD )⁩━◆
+let menu = `╭━━━〔 MENU ⁩〕━━━┈⊷
 
 *U S U A R I O*
 *Nombre:* ${name}
