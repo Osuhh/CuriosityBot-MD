@@ -25,7 +25,7 @@ import fetch from "node-fetch"
              console.log(`${error.response.status}\n\n${error.response.data}`); 
            } else { 
              console.log(error); 
-             m.reply("I\'m Facing An Error:"+ error.message); 
+             m.reply("Estoy enfrentando un error:"+ error.message); 
            } 
          } 
  } 
