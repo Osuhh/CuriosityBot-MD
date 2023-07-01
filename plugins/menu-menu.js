@@ -70,7 +70,7 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
 m.react('🚀')     
-let menu = `╔═════ೋೋ═════╗
+let menu = `╔═══「 *U S U A R I O* 」═══╗
 ║ *⫹⫺ NOMBRE:* ${name}
 ║ *⫹⫺ ️LIMITE :* ${diamond}
 ║ *⫹⫺ NIVEL :* ${level}
@@ -78,7 +78,7 @@ let menu = `╔═════ೋೋ═════╗
 〬║ *⫹⫺ EXP :* ${exp}
 ╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 *U S U A R I O S* 」═══╗
+╔═══「 *I N F O B O T* 」═══╗
 ║ *⫹⫺ CREADOR:* ${azami}
 ║ *⫹⫺ DUEÑO:* wa.me/59894808483
 〬║ *⫹⫺ BOT OFC:* wa.me/${animxscans}
@@ -92,7 +92,7 @@ let menu = `╔═════ೋೋ═════╗
 ║ *⫹⫺ FECHA :* ${date}
 〬╚════ ≪ •❈• ≫ ════╝
 
-〬╔═══「 I N F O R M A C I Ó N 」══╗
+〬╔══「 I N F O R M A C I Ó N 」═╗
 〬║ႌ〬⫹⫺ ${usedPrefix}estado
 ║ႌ〬⫹⫺ ${usedPrefix}owner
 〬║ႌ〬⫹⫺ ${usedPrefix}grouplist
@@ -105,7 +105,7 @@ let menu = `╔═════ೋೋ═════╗
 ║ႌ〬⫹⫺ ${usedPrefix}bot
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「  S E R B O T/J A D I B O T 」══╗
+╔══「  J A D I B O T 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}Serbot 
 ║ႌ〬⫹⫺ ${usedPrefix}jadibot
 ║ႌ〬⫹⫺ ${usedPrefix}bots
@@ -113,7 +113,7 @@ let menu = `╔═════ೋೋ═════╗
 ║ႌ〬⫹⫺ ${usedPrefix}stop
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 D E S C A R G A S 」══╗
+╔══「 D E S C A R G A S 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}play
 ║ႌ〬⫹⫺ ${usedPrefix}play2
 ║ႌ〬⫹⫺ ${usedPrefix}yta
@@ -127,12 +127,12 @@ let menu = `╔═════ೋೋ═════╗
 ║ႌ〬⫹⫺ ${usedPrefix}mediafire
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 B U S C A D O R E S 」══╗
+╔══「 B U S C A D O R E S 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}google
 ║ႌ〬⫹⫺ ${usedPrefix}yts
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 C O N V E R T I D O R E S 」══╗
+╔══「 C O N V E R T I D O R E S 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}toimg
 ║ႌ〬⫹⫺ ${usedPrefix}tomp3
 ║ႌ〬⫹⫺ ${usedPrefix}toptt
@@ -141,7 +141,7 @@ let menu = `╔═════ೋೋ═════╗
 ║ႌ〬⫹⫺ ${usedPrefix}tts
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 A U D I O S   E F E C T O S 」══╗
+╔══「 A U D I O S   E F E C T O S 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}bass
 ║ႌ〬⫹⫺ ${usedPrefix}blown
 ║ႌ〬⫹⫺ ${usedPrefix}deep
@@ -158,7 +158,7 @@ let menu = `╔═════ೋೋ═════╗
 ║ႌ〬⫹⫺ ${usedPrefix}chipmunk
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 H E R R A M I E N T A S 」══╗
+╔══「 H E R R A M I E N T A S 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}acortar
 ║ႌ〬⫹⫺ ${usedPrefix}qr
 ║ႌ〬⫹⫺ ${usedPrefix}delete
@@ -166,15 +166,15 @@ let menu = `╔═════ೋೋ═════╗
 ║ႌ〬⫹⫺ ${usedPrefix}styletext
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 J U E G O S 」══╗
+╔══「 J U E G O S 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}mates
 ║ႌ〬⫹⫺ ${usedPrefix}math
 ║ႌ〬⫹⫺ ${usedPrefix}simi
 ║ႌ〬⫹⫺ ${usedPrefix}suerte
 ║ႌ〬⫹⫺ ${usedPrefix}ppt
-${usedPrefix}tictactoe
-${usedPrefix}deltictactoe
-${usedPrefix}topgays
+║ႌ〬⫹⫺ ${usedPrefix}tictactoe
+║ႌ〬⫹⫺ ${usedPrefix}deltictactoe
+║ႌ〬⫹⫺ ${usedPrefix}topgays
 ║ႌ〬⫹⫺ ${usedPrefix}topotakus
 ║ႌ〬⫹⫺ ${usedPrefix}gay
 ║ႌ〬⫹⫺ ${usedPrefix}doxear
@@ -184,7 +184,7 @@ ${usedPrefix}topgays
 ║ႌ〬⫹⫺ ${usedPrefix}dado
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 G R U P O S 」══╗
+╔══「 G R U P O S 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}grupo
 ║ႌ〬⫹⫺ ${usedPrefix}kick
 ║ႌ〬⫹⫺ ${usedPrefix}add
@@ -201,7 +201,7 @@ ${usedPrefix}topgays
 ║ႌ〬⫹⫺ ${usedPrefix}unbanchat
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 E N A B L E / D I S A B L E 」══╗
+╔══「 E N A B L E / D I S A B L E 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}enable welcome
 ║ႌ〬⫹⫺ ${usedPrefix}disable welcome
 ║ႌ〬⫹⫺ ${usedPrefix}enable public
@@ -222,7 +222,7 @@ ${usedPrefix}topgays
 ║ႌ〬⫹⫺ ${usedPrefix}disable gconly
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 R P G 」══╗
+╔══「 R P G 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}minar
 ║ႌ〬⫹⫺ ${usedPrefix}minar3
 ║ႌ〬⫹⫺ ${usedPrefix}minardiamantes
@@ -238,12 +238,12 @@ ${usedPrefix}topgays
 ║ႌ〬⫹⫺ ${usedPrefix}levelup
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 STICKER 」══╗
+╔══「 STICKER 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}s
 ║ႌ〬⫹⫺ ${usedPrefix}wm
 〬╚════ ≪ •❈• ≫ ════╝
 
-╔═══「 O W N E R 」══╗
+╔══「 O W N E R 」═╗
 ║ႌ〬⫹⫺ ${usedPrefix}update
 ║ႌ〬⫹⫺ ${usedPrefix}restart
 ║ႌ〬⫹⫺ ${usedPrefix}autoadmin
