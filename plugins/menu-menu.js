@@ -78,7 +78,9 @@ let menu = `╭━━━━━═[ INFO BOT ]═━━━━━⋆
 ┃★│ *Tiempo activo:* ${uptime}
 ┃★│ *Usuarios:* ${rtotalreg}
 ┃★╰────────────── 
-╰┬━━━━━━━━━━━━━━━⋆
+╰━━━━━━━━━━━━━━━━━━━━━━⋆
+
+
 ⠀┃★╭──────────────
 ⠀┃★│ *U S U A R I O*
 ⠀┃★│ *Nombre:* ${name}
