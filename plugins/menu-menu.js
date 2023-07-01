@@ -72,11 +72,11 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
 m.react('🚀')     
 let menu = `╭━━━〔 M E N U ⁩〕━━━┈⊷
 ┃★╭──────────────
-*U S U A R I O*
-*Nombre:* ${name}
-*Nivel:* ${level}
-*Exp:* ${exp}
-*Limite:* ${diamond}
+┃★│ *U S U A R I O*
+┃★│ *Nombre:* ${name}
+┃★│ *Nivel:* ${level}
+┃★│ *Exp:* ${exp}
+┃★│ *Límites:* ${diamond}
 
 *H O Y*
 *Fecha:* ${date}
