@@ -19,7 +19,7 @@ global.owner = [
   ['50258115623']]  
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.animxscans = [['56962237366', 'CuriosityBot-MD', true]]
+global.animxscans = [['56962237366']]
 global.suittag = ['59894808483'] 
 global.mods = [] 
 global.prems = []
