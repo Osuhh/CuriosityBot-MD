@@ -78,20 +78,14 @@ let menu = `╭━━━━━═[ INFO BOT ]═━━━━━⋆
 ┃★│ *Tiempo activo:* ${uptime}
 ┃★│ *Usuarios:* ${rtotalreg}
 ├────────────────
-━━━━━═[ INFO BOT ]═━━━━━⋆
+┣━━━━━═[ INFO BOT ]═━━━━━⋆
 ┃★╭──────────────
-┃★│
+┃★│ *Nombre:* ${name}
+┃★│ *Nivel:* ${nivel}
+┃★│ *Exp:* ${exp}
+┃★│ *Límites:* ${diamond}
+┃★╰──────────────
 ╰━━━━━━━━━━━━━━━━━━━⋆
-
-
-⠀┃★╭──────────────
-⠀┃★│ *U S U A R I O*
-⠀┃★│ *Nombre:* ${name}
-⠀┃★│ *Nivel:* ${level}
-⠀┃★│ *Exp:* ${exp}
-⠀┃★│ *Límites:* ${diamond}
-⠀┃★╰────────────── 
-⠀╰━━━━━━━━━━━━━━━┈⊷
 
 *H O Y*
 *Fecha:* ${date}
