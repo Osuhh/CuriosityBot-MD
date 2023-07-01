@@ -81,7 +81,7 @@ let menu = `╭━━━━━═[ INFO BOT ]═━━━━━⋆
 ┣━━━━━═[ INFO BOT ]═━━━━━⋆
 ┃★╭──────────────
 ┃★│ *Nombre:* ${name}
-┃★│ *Nivel:* ${nivel}
+┃★│ *Nivel:* ${level}
 ┃★│ *Exp:* ${exp}
 ┃★│ *Límites:* ${diamond}
 ┃★╰──────────────
