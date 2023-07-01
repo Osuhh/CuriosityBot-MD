@@ -1,4 +1,4 @@
-//CÓDIGO ADAPTADO POR https://github.com/GataNina-Li | @gata_dios & https://github.com/Azami19 | @Azami
+//CÓDIGO ADAPTADO POR https://github.com/GataNina-Li ┬ | @gata_dios & https://github.com/Azami19 | @Azami
 
 import fs from 'fs'
 import fetch from 'node-fetch'
@@ -71,6 +71,9 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
 m.react('🚀')     
 let menu = `╭━━━〔 M E N U ⁩〕━━━┈⊷
+┃★╭──────────────
+┃★│ *I N F O*
+
 ┃★╭──────────────
 ┃★│ *U S U A R I O*
 ┃★│ *Nombre:* ${name}
