@@ -73,8 +73,8 @@ m.react('🚀')
 let menu = `╭━━━━━═[ INFO BOT ]═━━━━━⋆
 ┃★╭──────────────
 ┃★│ *Creador:* ${azami}
-┃★│ *Número:* 
-┃★│ *Bot oficial:*
+┃★│ *Número:* wa.me/59894808483
+┃★│ *Bot oficial:* wa.me/56962237366
 ┃★│ *Tiempo activo:* ${uptime}
 ┃★│ *Usuarios:* ${rtotalreg}
 ┃★╰────────────── 
@@ -92,13 +92,6 @@ let menu = `╭━━━━━═[ INFO BOT ]═━━━━━⋆
 
 *H O Y*
 *Fecha:* ${date}
-
-*I N F O*
-*Creador:* Azami
-*Número*: wa.me/59894808483
-*Bot oficial:* wa.me/5355772234
-*Tiempo activo:* ${uptime}
-*Usuarios:* ${rtotalreg}
 
 *「 I N F O R M A C I Ó N 」*
 ${usedPrefix}estado
