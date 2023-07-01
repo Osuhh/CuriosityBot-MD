@@ -80,14 +80,14 @@ let menu = `╭━━━〔 M E N U ⁩〕━━━┈⊷
 ┃★│ *Usuarios:* ${rtotalreg}
 ┃★╰────────────── 
 ╰┬━━━━━━━━━━━━━━━┈⊷
- ┃★╭──────────────
- ┃★│ *U S U A R I O*
- ┃★│ *Nombre:* ${name}
- ┃★│ *Nivel:* ${level}
- ┃★│ *Exp:* ${exp}
- ┃★│ *Límites:* ${diamond}
- ┃★╰────────────── 
- ╰━━━━━━━━━━━━━━━┈⊷
+⠀┃★╭──────────────
+⠀┃★│ *U S U A R I O*
+⠀┃★│ *Nombre:* ${name}
+⠀┃★│ *Nivel:* ${level}
+⠀┃★│ *Exp:* ${exp}
+⠀┃★│ *Límites:* ${diamond}
+⠀┃★╰────────────── 
+⠀╰━━━━━━━━━━━━━━━┈⊷
 
 *H O Y*
 *Fecha:* ${date}
