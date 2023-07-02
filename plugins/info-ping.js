@@ -1,4 +1,23 @@
-import { cpus as _cpus, totalmem, freemem } from 'os'
+
+import speed from 'performance-now'
+import { spawn, exec, execSync } from 'child_process'
+
+let handler = async (m, { conn }) => {
+         let timestamp = speed();
+         let latensi = speed() - timestamp;
+         exec(`neofetch --stdout`, (error, stdout, stderr) => {
+          let child = stdout.toString("utf-8");
+          let ssd = child.replace(/Memory:/, "Ram:");
+          m.reply(`*🏓 Pong  ${latensi.toFixed(4)}*`);
+            });
+}
+handler.help = ['ping']
+handler.tags = ['main']
+handler.command = ['ping', 'speed']
+handler.register = true
+export default handler
+
+/*import { cpus as _cpus, totalmem, freemem } from 'os'
 import util from 'util'
 import { performance } from 'perf_hooks'
 import { sizeFormatter } from 'human-readable'
@@ -54,10 +73,10 @@ let infobt = `╭─╮─᤻─᳒─᤻᳒「 ${wm} 」
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `
 m.reply(infobt)
-/*conn.sendButton(m.chat, infobt, fgig, null, [
+conn.sendButton(m.chat, infobt, fgig, null, [
   ['Menu', `${usedPrefix}menu`],
    ['Grupos', `${usedPrefix}grupos`]
- ], m)*/
+ ], m)
 
 }
 handler.help = ['info']
@@ -65,4 +84,4 @@ handler.tags = ['main']
 handler.command = ['info', 'ping', 'botinfo']
 handler.register = true
 
-export default handler
+export default handler*/
