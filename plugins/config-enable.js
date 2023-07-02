@@ -200,6 +200,14 @@ throw false
 }
 global.opts['gconly'] = isEnable
 break
+case 'antiprivado':
+isAll = true
+if (!isROwner) {
+global.dfail('rowner', m, conn)
+throw false
+}
+bot.antiPrivate = isEnable
+break
 case 'swonly':
 case 'statusonly':
 isAll = true
