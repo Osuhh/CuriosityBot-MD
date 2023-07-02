@@ -83,7 +83,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ---|---
 [Gata Dios](https://github.com/GataNina-Li)  | [reyEndymion](https://github.com/ReyEndymion)
 | [reyEndymin](https://github.com/ReyEndymion)
-Colaboradora | Colaborador | xd
+Colaboradora | Colaborador | xd |
 
 ##### AGRADECIMIENTO ESPECIAL PARA
 <!--[![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
