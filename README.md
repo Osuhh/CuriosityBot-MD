@@ -79,9 +79,11 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 #### COLABORADORES 
 <a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png?size=100" width="100" height="100"></a> | [![reyEndymion](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion) 
+[reyEndymin](https://github.com/ReyEndymion.png?size=100)](https://github.com/ReyEndymion) 
 ---|---
 [Gata Dios](https://github.com/GataNina-Li)  | [reyEndymion](https://github.com/ReyEndymion)
-Colaboradora | Colaborador |
+| [reyEndymin](https://github.com/ReyEndymion)
+Colaboradora | Colaborador | xd
 
 ##### AGRADECIMIENTO ESPECIAL PARA
 <!--[![Nurutomo](https://github.com/Nurutomo.png?size=100)](https://github.com/Nurutomo)
