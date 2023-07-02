@@ -11,17 +11,7 @@ let str = `*「 💰 DONAR 💰 」*
 
 ${xdxd}`
 
-await conn.sendFile(m.chat, media, 'Curiosity.jpg', str, fkontak)
-} catch (error) { 
-           if (error.response) { 
-             console.log(error.response.status); 
-             console.log(error.response.data); 
-             console.log(`${error.response.status}\n\n${error.response.data}`); 
-           } else { 
-             console.log(error); 
-             m.reply("Estoy enfrentando un error:"+ error.message); 
-           } 
-         } }
+await conn.sendFile(m.chat, media, 'Curiosity.jpg', str, fkontak)}
 
 handler.command = /^donar|donate|donasi$/i
 handler.exp = 35
