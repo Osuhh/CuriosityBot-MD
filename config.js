@@ -14,7 +14,6 @@ const __dirname = global.__dirname(import.meta.url)
 //⊱ ━━━━━.⋅ Owner ⋅.━━━━ ⊰
 global.owner = [
   ['59894808483', 'Azami - Creador 🥏', true],
-  ['5214532268948', 'Spetsamurai🌻', true],
   ['5214531106422'], ['593968585383'], ['5492266613038'], ['5492266466080'],
   ['50258115623']]  
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
@@ -106,7 +105,7 @@ global.img = 'https://telegra.ph/file/76816166bd79aa848848d.jpg'
 //⊱ ━━━━━.⋅ Sticker WM ⋅.━━━━ ⊰
 
 global.packname = 'CuriosityBot-MD.js'
-global.author = '@1.0.0'
+global.author = '@1.0.2'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -116,7 +115,7 @@ global.wm = '『 CuriosityBot-MD 』'
 global.azami = 'Azami ©'
 global.cb = 'CuriosityBot-MD'
 global.wait = '*⌛ _Cargando..._ ▬▬▬▭*'
-global.vs = '1.0.0'
+global.vs = '1.0.2'
 global.yt = 'https://www.youtube.com/@Azami_19'
 global.ig = 'https://instagram.com/azami.19'
 global.md = 'https://github.com/Undefined17/CuriosityBot-MD'
