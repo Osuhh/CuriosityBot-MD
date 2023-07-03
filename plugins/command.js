@@ -10,3 +10,4 @@ let fetch = require("node-fetch")
  } 
  handler.customPrefix = /^cita ?cita$/i 
  handler.command = new RegExp
+export default handler
