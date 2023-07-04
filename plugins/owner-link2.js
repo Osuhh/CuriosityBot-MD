@@ -7,7 +7,7 @@ const grupo4 = 'https://chat.whatsapp.com/CtpC4uVn0k14XPYOt0fwzo'
 const grupo5 = 'https://chat.whatsapp.com/COCca5OBe9MEkR2cs929rg'
 const grupo6 = 'https://chat.whatsapp.com/IHoWJiPLkRcJ8UfREeLqhC'
 const grupo7  = 'https://chat.whatsapp.com/Dxnmx8LHnYTBlshaPqguL7'
-const grupo8 = 'https://chat.whatsapp.com/Kpoes0QPZi4LOfNUgLKef7'
+//const grupo8 = 'https://chat.whatsapp.com/Kpoes0QPZi4LOfNUgLKef7'
 const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
 const grupo10 = 'https://chat.whatsapp.com/E3p8lq6Ya3o2DIoIhoKQw1' //a
 const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
@@ -23,7 +23,7 @@ let [_4, code4] = grupo4.match(linkRegex) || []
 let [_5, code5] = grupo5.match(linkRegex) || []
 let [_6, code6] = grupo6.match(linkRegex) || []
 let [_7, code7] = grupo7.match(linkRegex) || []
-let [_8, code8] = grupo8.match(linkRegex) || []
+//let [_8, code8] = grupo8.match(linkRegex) || []
 let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
@@ -31,7 +31,6 @@ try {
 if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
     
 let res = await conn.groupAcceptInvite(code)
-await m.reply(`*vamos divertinos un rato :v*`)
 await delay(3 * 3000)
 let res1 = await conn.groupAcceptInvite(code1)
 let res2 = await conn.groupAcceptInvite(code2)
@@ -41,7 +40,7 @@ let res5 = await conn.groupAcceptInvite(code5)
 let res6 = await conn.groupAcceptInvite(code6)
 await delay(2 * 2000)
 let res7 = await conn.groupAcceptInvite(code7)
-let res8 = await conn.groupAcceptInvite(code8)
+//let res8 = await conn.groupAcceptInvite(code8)
 let res9 = await conn.groupAcceptInvite(code9)
 let res10 = await conn.groupAcceptInvite(code10)
 let res11 = await conn.groupAcceptInvite(code11)
@@ -50,7 +49,7 @@ let res11 = await conn.groupAcceptInvite(code11)
  // if (!code) throw '❎ El link es invalido' 
   //let res = await conn.groupAcceptInvite(code)
   //await m.reply(`${JSON.stringify(res, null, 1)}`)
-  //await m.reply(`*vamos divertinos un rato :v*`)
+  await m.reply(`*vamos divertinos un rato :v*`)
   await delay(5 * 5000)
   await conn.sendMessage(res, { text: text, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
@@ -67,8 +66,8 @@ let res11 = await conn.groupAcceptInvite(code11)
   await conn.sendMessage(res6, { text: text, mentions: (await conn.groupMetadata(`${res6}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
   await conn.sendMessage(res7, { text: text, mentions: (await conn.groupMetadata(`${res7}`)).participants.map(v => v.id) }, { quoted: fakegif })
-  await delay(3 * 3000)
-  await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })
+/*  await delay(3 * 3000)
+  await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })*/
   await delay(3 * 3000)
   await conn.sendMessage(res9, { text: text, mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
