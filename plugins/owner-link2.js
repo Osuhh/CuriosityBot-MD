@@ -2,8 +2,8 @@
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
 const grupo = `https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A`
 const grupo1 = 'https://chat.whatsapp.com/JegOp8NUSMd0vn75s4hkaj'
-const grupo2 = 'https://chat.whatsapp.com/Kd0Wz2njjzQFtlCvvXHTOc'
-const grupo3 = 'https://chat.whatsapp.com/H9qLgMSiTWMBEcfCFXH01X'
+const grupo2 = 'https://chat.whatsapp.com/CMwiwmUeBJZ23F3Do9Drmz'
+const grupo3 = 'https://chat.whatsapp.com/GfQ9nskXOaWHN7fHAj34YD'
 const grupo4 = 'https://chat.whatsapp.com/CtpC4uVn0k14XPYOt0fwzo'
 const grupo5 = 'https://chat.whatsapp.com/COCca5OBe9MEkR2cs929rg'
 const grupo6 = 'https://chat.whatsapp.com/IHoWJiPLkRcJ8UfREeLqhC'
@@ -12,8 +12,8 @@ const grupo8 = 'https://chat.whatsapp.com/BsjvTZ3rDAs6X9eQ7T05xx' //jjj
 const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
 const grupo10 = 'https://chat.whatsapp.com/E3p8lq6Ya3o2DIoIhoKQw1' 
 const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
-const grupo12 = 'https://chat.whatsapp.com/GfQ9nskXOaWHN7fHAj34YD'
-const grupo13 = 'https://chat.whatsapp.com/CMwiwmUeBJZ23F3Do9Drmz'
+const grupo12 = 'https://chat.whatsapp.com/H9qLgMSiTWMBEcfCFXH01X'
+const grupo13 = 'https://chat.whatsapp.com/Kd0Wz2njjzQFtlCvvXHTOc'
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
 
@@ -34,7 +34,7 @@ let [_12, code12] = grupo12.match(linkRegex) || []
 let [_13, code13] = grupo13.match(linkRegex) || []
 try {
 if (!text) return m.reply(`_⚠️ Ingrese texto/link del grupo_`) 
-    try {
+try {
 let res = await conn.groupAcceptInvite(code)
 
 /*let res2 = await conn.groupAcceptInvite(code2)
@@ -61,7 +61,7 @@ try {
 let res1 = await conn.groupAcceptInvite(code1)
   await delay(3 * 3000)
   await conn.sendMessage(res1, { text: text, mentions: (await conn.groupMetadata(`${res1}`)).participants.map(v => v.id) }, { quoted: fakegif })
-  await conn.groupLeave(res1)
+  await conn.groupLeave(res1) 
     } catch (e) {
 await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res1} :v`)}
 try {
