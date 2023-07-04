@@ -8,9 +8,9 @@ const grupo4 = 'https://chat.whatsapp.com/CtpC4uVn0k14XPYOt0fwzo'
 const grupo5 = 'https://chat.whatsapp.com/COCca5OBe9MEkR2cs929rg'
 const grupo6 = 'https://chat.whatsapp.com/IHoWJiPLkRcJ8UfREeLqhC'
 const grupo7  = 'https://chat.whatsapp.com/Dxnmx8LHnYTBlshaPqguL7'
-const grupo8 = 'https://chat.whatsapp.com/Kpoes0QPZi4LOfNUgLKef7'
+const grupo8 = 'https://chat.whatsapp.com/F7V4USoZ3ECDPYqFekSPhk' //jjj
 const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
-const grupo10 = 'https://chat.whatsapp.com/E3p8lq6Ya3o2DIoIhoKQw1' //a
+const grupo10 = 'https://chat.whatsapp.com/E3p8lq6Ya3o2DIoIhoKQw1' 
 const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
