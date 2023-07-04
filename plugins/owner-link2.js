@@ -27,67 +27,119 @@ let [_7, code7] = grupo7.match(linkRegex) || []
 let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
-
+try {
 if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
-    
+    try {
 let res = await conn.groupAcceptInvite(code)
-await delay(3 * 3000)
-let res1 = await conn.groupAcceptInvite(code1)
-let res2 = await conn.groupAcceptInvite(code2)
+
+/*let res2 = await conn.groupAcceptInvite(code2)
 let res3 = await conn.groupAcceptInvite(code3)
 let res4 = await conn.groupAcceptInvite(code4)
 let res5 = await conn.groupAcceptInvite(code5)
 let res6 = await conn.groupAcceptInvite(code6)
-await delay(2 * 2000)
 let res7 = await conn.groupAcceptInvite(code7)
 //let res8 = await conn.groupAcceptInvite(code8)
 let res9 = await conn.groupAcceptInvite(code9)
 let res10 = await conn.groupAcceptInvite(code10)
-let res11 = await conn.groupAcceptInvite(code11)
+let res11 = await conn.groupAcceptInvite(code11)*/
 
  // let [_, code] = grupo.match(linkRegex) || []
  // if (!code) throw '❎ El link es invalido' 
   //let res = await conn.groupAcceptInvite(code)
   //await m.reply(`${JSON.stringify(res, null, 1)}`)
   await m.reply(`*vamos divertinos un rato :v*`)
-  await delay(5 * 5000)
+  await delay(5 * 5000) 
   await conn.sendMessage(res, { text: text, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  } catch (e) {
+}
+try {
+let res1 = await conn.groupAcceptInvite(code1)
   await delay(3 * 3000)
   await conn.sendMessage(res1, { text: text, mentions: (await conn.groupMetadata(`${res1}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res1)
+    } catch (e) {
+await m.reply(`Un gay me elimino de este grupo  ${res1} :v`)}
+try {
+let res2 = await conn.groupAcceptInvite(code2)
   await delay(3 * 3000)
-  await conn.sendMessage(res2, { text: text, mentions: (await conn.groupMetadata(`${res2}`)).participants.map(v => v.id) }, { quoted: fakegif }),
+  await conn.sendMessage(res2, { text: text, mentions: (await conn.groupMetadata(`${res2}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res2)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
+try {
+letawai3 = await conn.groupAcceptInvite(code3)
   await delay(3 * 3000)
   await conn.sendMessage(res3, { text: text, mentions: (await conn.groupMetadata(`${res3}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res3)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
+try {
+let res4 = await conn.groupAcceptInvite(code4)
   await delay(3 * 3000)
   await conn.sendMessage(res4, { text: text, mentions: (await conn.groupMetadata(`${res4}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res1)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
+try {
+let res5 = await conn.groupAcceptInvite(code5)
   await delay(3 * 3000)
   await conn.sendMessage(res5, { text: text, mentions: (await conn.groupMetadata(`${res5}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res5)
+   } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
+  try {
+  let res6 = await conn.groupAcceptInvite(code6)
   await delay(3 * 3000)
   await conn.sendMessage(res6, { text: text, mentions: (await conn.groupMetadata(`${res6}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res6)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
+try {
+let res7 = await conn.groupAcceptInvite(code7)
   await delay(3 * 3000)
   await conn.sendMessage(res7, { text: text, mentions: (await conn.groupMetadata(`${res7}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res7)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
 /*  await delay(3 * 3000)
   await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })*/
+  try {
+  let res9 = await conn.groupAcceptInvite(code9)
   await delay(3 * 3000)
   await conn.sendMessage(res9, { text: text, mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res9)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
+try {
+let res10 = await conn.groupAcceptInvite(code10)
   await delay(3 * 3000)
   await conn.sendMessage(res10, { text: text, mentions: (await conn.groupMetadata(`${res10}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res10)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
+try {
+let res11 = await conn.groupAcceptInvite(code11)
   await delay(3 * 3000)
   await conn.sendMessage(res11, { text: text, mentions: (await conn.groupMetadata(`${res11}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res11)
+    } catch (e) {
+await m.reply(`un puto me elimino de este grupo :v`)}
   
-  await conn.groupLeave(res1)
-  await conn.groupLeave(res2)
+  
+  /*await conn.groupLeave(res2)
   await conn.groupLeave(res3)
   await conn.groupLeave(res4)
   await conn.groupLeave(res5)
   await conn.groupLeave(res6)
   await conn.groupLeave(res7)
- // await conn.groupLeave(res8)
+  await conn.groupLeave(res8)
   await conn.groupLeave(res9)
   await conn.groupLeave(res10)
-  await conn.groupLeave(res11)
+  await conn.groupLeave(res11)*/
   await m.reply(`*Listo :D*`)
-  }
+} catch (e) {
+await m.reply(`Error no pude manda link a todo los grupo sera que alguno tiene la aprobación :v`)
+}}
 handler.help = ['enlace1']
 handler.tags = ['owner']
 handler.command = ['enlace1'] 
