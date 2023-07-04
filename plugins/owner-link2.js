@@ -28,18 +28,17 @@ let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
 try {
-if (!text) return m.reply(`_⚠️ Ingrese texto/link del grupo_`) 
+if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
     
 let res = await conn.groupAcceptInvite(code)
 await delay(3 * 3000)
 let res1 = await conn.groupAcceptInvite(code1)
 let res2 = await conn.groupAcceptInvite(code2)
 let res3 = await conn.groupAcceptInvite(code3)
-await delay(2 * 2000)
 let res4 = await conn.groupAcceptInvite(code4)
 let res5 = await conn.groupAcceptInvite(code5)
 let res6 = await conn.groupAcceptInvite(code6)
-await delay(3 * 3000)
+await delay(2 * 2000)
 let res7 = await conn.groupAcceptInvite(code7)
 let res8 = await conn.groupAcceptInvite(code8)
 let res9 = await conn.groupAcceptInvite(code9)
@@ -89,8 +88,7 @@ let res11 = await conn.groupAcceptInvite(code11)
   await conn.groupLeave(res11)
   await m.reply(`*Listo :D*`)
 } catch (e) {
-await m.reply(m.chat, `Error no pude manda link a todo los grupo sera que alguno tiene la aprobación :v`, m)
-console.log(e)
+await m.reply(`Error no pude manda link a todo los grupo sera que alguno tiene la aprobación :v`)
 }}
 handler.help = ['enlace1']
 handler.tags = ['owner']
