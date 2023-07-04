@@ -37,7 +37,7 @@ function start(file) {
   isRunning = true
   let args = [join(__dirname, file), ...process.argv.slice(2)]
   say([process.argv[0], ...args].join(' '), {
-   font: 'console',
+    font: 'console',
     align: 'center',
     gradient: ['blue', 'red']
   })
