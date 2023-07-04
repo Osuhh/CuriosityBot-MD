@@ -312,12 +312,12 @@ let buttonMessage = {
             'mediaType': 0x1,
             'previewType': "PHOTO",
             'title': 'Hola!!',
-            'thumbnail': fs.readFileSync('./storage/menus/Menu1.jpg'),
+            'thumbnail': fs.readFileSync('./storage/img/Menu2.jpg'),
             'renderLargerThumbnail': !![],
             'sourceUrl': yt
         }
     },
-    'caption': menu['trim']()
+  'caption': menu['trim']()
 }
 await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)], buttonMessage, { 'quoted': fkontak })
 } catch {
