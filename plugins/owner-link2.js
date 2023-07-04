@@ -90,7 +90,6 @@ let res11 = await conn.groupAcceptInvite(code11)
   await m.reply(`*Listo :D*`)
 } catch (e) {
 await m.reply(m.chat, `Error no pude manda link a todo los grupo sera que alguno tiene la aprobación :v`, m)
-console.log(`❗❗ esta fallado ${usedPrefix + command} ❗❗`)
 console.log(e)
 }}
 handler.help = ['enlace1']
