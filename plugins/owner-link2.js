@@ -8,14 +8,16 @@ const grupo4 = 'https://chat.whatsapp.com/CtpC4uVn0k14XPYOt0fwzo'
 const grupo5 = 'https://chat.whatsapp.com/COCca5OBe9MEkR2cs929rg'
 const grupo6 = 'https://chat.whatsapp.com/IHoWJiPLkRcJ8UfREeLqhC'
 const grupo7  = 'https://chat.whatsapp.com/Dxnmx8LHnYTBlshaPqguL7'
-const grupo8 = 'https://chat.whatsapp.com/F7V4USoZ3ECDPYqFekSPhk' //jjj
+const grupo8 = 'https://chat.whatsapp.com/BsjvTZ3rDAs6X9eQ7T05xx' //jjj
 const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
 const grupo10 = 'https://chat.whatsapp.com/E3p8lq6Ya3o2DIoIhoKQw1' 
 const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
+const grupo12 = 'https://chat.whatsapp.com/GfQ9nskXOaWHN7fHAj34YD'
+const grupo13 = 'https://chat.whatsapp.com/CMwiwmUeBJZ23F3Do9Drmz'
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
 
-  let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'CuriosityBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unirte a mi grupo ^~^', 'jpegThumbnail': false }}}
+  let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'CuriosityBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unirte a mi grupo uwu', 'jpegThumbnail': false }}}
 let [_, code] = grupo.match(linkRegex) || []
 let [_1, code1] = grupo1.match(linkRegex) || []
 let [_2, code2] = grupo2.match(linkRegex) || []
@@ -28,6 +30,8 @@ let [_8, code8] = grupo8.match(linkRegex) || []
 let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
+let [_12, code12] = grupo12.match(linkRegex) || []
+let [_13, code13] = grupo13.match(linkRegex) || []
 try {
 if (!text) return m.reply(`_⚠️ Ingrese texto/link del grupo_`) 
     try {
@@ -130,7 +134,20 @@ let res11 = await conn.groupAcceptInvite(code11)
   await conn.groupLeave(res11)
     } catch (e) {
 await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res11} :v`)}
-  
+try {
+let res12 = await conn.groupAcceptInvite(code12)
+  await delay(3 * 3000)
+  await conn.sendMessage(res12, { text: text, mentions: (await conn.groupMetadata(`${res12}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res12)
+    } catch (e) {
+await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res12} :v`)}
+  try {
+let res13 = await conn.groupAcceptInvite(code13)
+  await delay(3 * 3000)
+  await conn.sendMessage(res13, { text: text, mentions: (await conn.groupMetadata(`${res13}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res13)
+    } catch (e) {
+await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res13} :v`)}
   /*await conn.groupLeave(res2)
   await conn.groupLeave(res3)
   await conn.groupLeave(res4)
