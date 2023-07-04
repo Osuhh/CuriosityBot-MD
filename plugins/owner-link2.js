@@ -8,7 +8,7 @@ const grupo5 = 'https://chat.whatsapp.com/COCca5OBe9MEkR2cs929rg'
 const grupo6 = 'https://chat.whatsapp.com/IHoWJiPLkRcJ8UfREeLqhC'
 const grupo7  = 'https://chat.whatsapp.com/Dxnmx8LHnYTBlshaPqguL7'
 const grupo8 = 'https://chat.whatsapp.com/Kpoes0QPZi4LOfNUgLKef7'
-const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
+//const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
 const grupo10 = 'https://chat.whatsapp.com/IF9dreZSFsr5oz7nRtByiO'
 const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
 
@@ -24,33 +24,26 @@ let [_5, code5] = grupo5.match(linkRegex) || []
 let [_6, code6] = grupo6.match(linkRegex) || []
 let [_7, code7] = grupo7.match(linkRegex) || []
 let [_8, code8] = grupo8.match(linkRegex) || []
-let [_9, code9] = grupo9.match(linkRegex) || []
+//let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
 
-if (!text) return m.reply(`*Ingrese Texto/link del grupo*`) 
+if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
     
-await delay(2 * 2000)
 let res = await conn.groupAcceptInvite(code)
+await delay(3 * 3000)
 let res1 = await conn.groupAcceptInvite(code1)
-await delay(2 * 2000)
 let res2 = await conn.groupAcceptInvite(code2)
-await delay(2 * 2000)
 let res3 = await conn.groupAcceptInvite(code3)
 await delay(2 * 2000)
 let res4 = await conn.groupAcceptInvite(code4)
-await delay(2 * 2000)
 let res5 = await conn.groupAcceptInvite(code5)
-await delay(2 * 2000)
 let res6 = await conn.groupAcceptInvite(code6)
+await delay(3 * 3000)
 let res7 = await conn.groupAcceptInvite(code7)
-await delay(1 * 1000)
 let res8 = await conn.groupAcceptInvite(code8)
-await delay(2 * 2000)
-let res9 = await conn.groupAcceptInvite(code9)
-await delay(2 * 2000)
+//let res9 = await conn.groupAcceptInvite(code9)
 let res10 = await conn.groupAcceptInvite(code10)
-await delay(2 * 2000)
 let res11 = await conn.groupAcceptInvite(code11)
 
  // let [_, code] = grupo.match(linkRegex) || []
@@ -76,8 +69,8 @@ let res11 = await conn.groupAcceptInvite(code11)
   await conn.sendMessage(res7, { text: text, mentions: (await conn.groupMetadata(`${res7}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
   await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })
-  await delay(3 * 3000)
-  await conn.sendMessage(res9, { text: text, mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fakegif })
+//  await delay(3 * 3000)
+  //await conn.sendMessage(res9, { text: text, mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
   await conn.sendMessage(res10, { text: text, mentions: (await conn.groupMetadata(`${res10}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
