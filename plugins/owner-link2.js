@@ -1,3 +1,4 @@
+//
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
 const grupo = `https://chat.whatsapp.com/KlRcEfl8snBEEOA0JXzw5A`
 const grupo1 = 'https://chat.whatsapp.com/JegOp8NUSMd0vn75s4hkaj'
@@ -7,7 +8,7 @@ const grupo4 = 'https://chat.whatsapp.com/CtpC4uVn0k14XPYOt0fwzo'
 const grupo5 = 'https://chat.whatsapp.com/COCca5OBe9MEkR2cs929rg'
 const grupo6 = 'https://chat.whatsapp.com/IHoWJiPLkRcJ8UfREeLqhC'
 const grupo7  = 'https://chat.whatsapp.com/Dxnmx8LHnYTBlshaPqguL7'
-//const grupo8 = 'https://chat.whatsapp.com/Kpoes0QPZi4LOfNUgLKef7'
+const grupo8 = 'https://chat.whatsapp.com/Kpoes0QPZi4LOfNUgLKef7'
 const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
 const grupo10 = 'https://chat.whatsapp.com/E3p8lq6Ya3o2DIoIhoKQw1' //a
 const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
@@ -23,12 +24,12 @@ let [_4, code4] = grupo4.match(linkRegex) || []
 let [_5, code5] = grupo5.match(linkRegex) || []
 let [_6, code6] = grupo6.match(linkRegex) || []
 let [_7, code7] = grupo7.match(linkRegex) || []
-//let [_8, code8] = grupo8.match(linkRegex) || []
+let [_8, code8] = grupo8.match(linkRegex) || []
 let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
 try {
-if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
+if (!text) return m.reply(`_⚠️ Ingrese texto/link del grupo_`) 
     try {
 let res = await conn.groupAcceptInvite(code)
 
@@ -101,8 +102,13 @@ let res7 = await conn.groupAcceptInvite(code7)
   await conn.groupLeave(res7)
     } catch (e) {
 await m.reply(`un puto me elimino de este grupo :v`)}
-/*  await delay(3 * 3000)
-  await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })*/
+try {
+let res8 = await conn.groupAcceptInvite(code8)
+  await delay(3 * 3000)
+  await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res8)
+  } catch (e) {
+await m.reply(`Enlace anulado o me eliminado de este grupo ${res8} :v`)}
   try {
   let res9 = await conn.groupAcceptInvite(code9)
   await delay(3 * 3000)
@@ -138,7 +144,7 @@ await m.reply(`un puto me elimino de este grupo :v`)}
   await conn.groupLeave(res11)*/
   await m.reply(`*Listo :D*`)
 } catch (e) {
-await m.reply(`Error no pude manda link a todo los grupo sera que alguno tiene la aprobación :v`)
+await m.reply(`ERROR 404 :v`)
 }}
 handler.help = ['enlace1']
 handler.tags = ['owner']
