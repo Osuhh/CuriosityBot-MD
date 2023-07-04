@@ -31,6 +31,7 @@ try {
 if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
     
 let res = await conn.groupAcceptInvite(code)
+await m.reply(`*vamos divertinos un rato :v*`)
 await delay(3 * 3000)
 let res1 = await conn.groupAcceptInvite(code1)
 let res2 = await conn.groupAcceptInvite(code2)
@@ -49,7 +50,7 @@ let res11 = await conn.groupAcceptInvite(code11)
  // if (!code) throw '❎ El link es invalido' 
   //let res = await conn.groupAcceptInvite(code)
   //await m.reply(`${JSON.stringify(res, null, 1)}`)
-  await m.reply(`*vamos divertinos un rato :v*`)
+  //await m.reply(`*vamos divertinos un rato :v*`)
   await delay(5 * 5000)
   await conn.sendMessage(res, { text: text, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
