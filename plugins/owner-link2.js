@@ -67,7 +67,7 @@ let res2 = await conn.groupAcceptInvite(code2)
     } catch (e) {
 await m.reply(`un puto me elimino de este grupo :v`)}
 try {
-letawai3 = await conn.groupAcceptInvite(code3)
+let res3 = await conn.groupAcceptInvite(code3)
   await delay(3 * 3000)
   await conn.sendMessage(res3, { text: text, mentions: (await conn.groupMetadata(`${res3}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res3)
@@ -148,3 +148,4 @@ handler.owner = true
 
 export default handler
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+ 
