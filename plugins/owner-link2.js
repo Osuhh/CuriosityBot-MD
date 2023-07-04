@@ -8,8 +8,8 @@ const grupo5 = 'https://chat.whatsapp.com/COCca5OBe9MEkR2cs929rg'
 const grupo6 = 'https://chat.whatsapp.com/IHoWJiPLkRcJ8UfREeLqhC'
 const grupo7  = 'https://chat.whatsapp.com/Dxnmx8LHnYTBlshaPqguL7'
 const grupo8 = 'https://chat.whatsapp.com/Kpoes0QPZi4LOfNUgLKef7'
-//const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
-const grupo10 = 'https://chat.whatsapp.com/IF9dreZSFsr5oz7nRtByiO'
+const grupo9 = 'https://chat.whatsapp.com/LZkygD2NUWCAx1ipsJiSz9'
+const grupo10 = 'https://chat.whatsapp.com/IF9dreZSFsr5oz7nRtByiO' //a
 const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
@@ -24,10 +24,10 @@ let [_5, code5] = grupo5.match(linkRegex) || []
 let [_6, code6] = grupo6.match(linkRegex) || []
 let [_7, code7] = grupo7.match(linkRegex) || []
 let [_8, code8] = grupo8.match(linkRegex) || []
-//let [_9, code9] = grupo9.match(linkRegex) || []
+let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
-
+try {
 if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
     
 let res = await conn.groupAcceptInvite(code)
@@ -42,7 +42,7 @@ let res6 = await conn.groupAcceptInvite(code6)
 await delay(3 * 3000)
 let res7 = await conn.groupAcceptInvite(code7)
 let res8 = await conn.groupAcceptInvite(code8)
-//let res9 = await conn.groupAcceptInvite(code9)
+let res9 = await conn.groupAcceptInvite(code9)
 let res10 = await conn.groupAcceptInvite(code10)
 let res11 = await conn.groupAcceptInvite(code11)
 
@@ -69,14 +69,13 @@ let res11 = await conn.groupAcceptInvite(code11)
   await conn.sendMessage(res7, { text: text, mentions: (await conn.groupMetadata(`${res7}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
   await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })
-//  await delay(3 * 3000)
-  //await conn.sendMessage(res9, { text: text, mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await delay(3 * 3000)
+  await conn.sendMessage(res9, { text: text, mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
   await conn.sendMessage(res10, { text: text, mentions: (await conn.groupMetadata(`${res10}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await delay(3 * 3000)
   await conn.sendMessage(res11, { text: text, mentions: (await conn.groupMetadata(`${res11}`)).participants.map(v => v.id) }, { quoted: fakegif })
   
-  await conn.groupLeave(res)
   await conn.groupLeave(res1)
   await conn.groupLeave(res2)
   await conn.groupLeave(res3)
@@ -89,8 +88,11 @@ let res11 = await conn.groupAcceptInvite(code11)
   await conn.groupLeave(res10)
   await conn.groupLeave(res11)
   await m.reply(`*Listo :D*`)
-}
-
+} catch (e) {
+await m.reply(m.chat, `Error no pude manda link a todo los grupo sera que alguno tiene la aprobación :v`, m)
+console.log(`❗❗ esta fallado ${usedPrefix + command} ❗❗`)
+console.log(e)
+}}
 handler.help = ['enlace1']
 handler.tags = ['owner']
 handler.command = ['enlace1'] 
