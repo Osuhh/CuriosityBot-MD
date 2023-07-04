@@ -70,84 +70,84 @@ let res2 = await conn.groupAcceptInvite(code2)
   await conn.sendMessage(res2, { text: text, mentions: (await conn.groupMetadata(`${res2}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res2)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res2} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res3 = await conn.groupAcceptInvite(code3)
   await delay(3 * 3000)
   await conn.sendMessage(res3, { text: text, mentions: (await conn.groupMetadata(`${res3}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res3)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res3} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res4 = await conn.groupAcceptInvite(code4)
   await delay(3 * 3000)
   await conn.sendMessage(res4, { text: text, mentions: (await conn.groupMetadata(`${res4}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res4)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res4} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res5 = await conn.groupAcceptInvite(code5)
   await delay(3 * 3000)
   await conn.sendMessage(res5, { text: text, mentions: (await conn.groupMetadata(`${res5}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res5)
    } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res5} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
   try {
   let res6 = await conn.groupAcceptInvite(code6)
   await delay(3 * 3000)
   await conn.sendMessage(res6, { text: text, mentions: (await conn.groupMetadata(`${res6}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res6)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res6} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res7 = await conn.groupAcceptInvite(code7)
   await delay(3 * 3000)
   await conn.sendMessage(res7, { text: text, mentions: (await conn.groupMetadata(`${res7}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res7)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res7} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res8 = await conn.groupAcceptInvite(code8)
   await delay(3 * 3000)
   await conn.sendMessage(res8, { text: text, mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res8)
   } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res8} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
   try {
   let res9 = await conn.groupAcceptInvite(code9)
   await delay(3 * 3000)
   await conn.sendMessage(res9, { text: text, mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res9)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res9} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res10 = await conn.groupAcceptInvite(code10)
   await delay(3 * 3000)
   await conn.sendMessage(res10, { text: text, mentions: (await conn.groupMetadata(`${res10}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res10)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res10} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res11 = await conn.groupAcceptInvite(code11)
   await delay(3 * 3000)
   await conn.sendMessage(res11, { text: text, mentions: (await conn.groupMetadata(`${res11}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res11)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res11} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
 try {
 let res12 = await conn.groupAcceptInvite(code12)
   await delay(3 * 3000)
   await conn.sendMessage(res12, { text: text, mentions: (await conn.groupMetadata(`${res12}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res12)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res12} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
   try {
 let res13 = await conn.groupAcceptInvite(code13)
   await delay(3 * 3000)
   await conn.sendMessage(res13, { text: text, mentions: (await conn.groupMetadata(`${res13}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res13)
     } catch (e) {
-await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res13} :v`)}
+await m.reply(`Enlace anulado o puto me eliminado :v`)}
   /*await conn.groupLeave(res2)
   await conn.groupLeave(res3)
   await conn.groupLeave(res4)
