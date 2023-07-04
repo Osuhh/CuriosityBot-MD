@@ -28,7 +28,7 @@ let [_9, code9] = grupo9.match(linkRegex) || []
 let [_10, code10] = grupo10.match(linkRegex) || []
 let [_11, code11] = grupo11.match(linkRegex) || []
 try {
-if (!text) return m.reply(`_Ingrese Texto/link del grupo_`) 
+if (!text) return m.reply(`_⚠️ Ingrese texto/link del grupo_`) 
     
 let res = await conn.groupAcceptInvite(code)
 await delay(3 * 3000)
