@@ -5,7 +5,9 @@ let foto = './storage/img/grupos.jpg'
 let texto = `🍿 *＊•̩̩͙✩•̩̩͙˚ GRUPOS OFC ˚•̩̩͙✩•̩̩͙˚＊* 🍿
 
 *✧ GRUPO 1*
-*✦ ${nn}*
+╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
+*${nn}*
+╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄╯
 
 *✧ CURIOSITYBOT - GLOBAL 🌎*
 ╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
@@ -17,7 +19,7 @@ ${nnn}
  ${nnnnn}
 ╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄╯
 
-*✧ GRUPO COLABORACIÓN (MULTI BOTS) 💖*
+*✧ COLABORACIÓN (MULTI BOTS) 💖*
 ╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
 ${nnnn}         
 ╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄╯`
