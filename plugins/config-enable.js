@@ -200,6 +200,15 @@ throw false
 }
 global.opts['gconly'] = isEnable
 break
+case 'nsfw':
+      case '+18':
+       if (m.isGroup) {
+         if (!(isAdmin || isOwner)) {
+           global.dfail('admin', m, conn)
+            throw false
+           }}
+    chat.nsfw = isEnable          
+    break
 case 'antiprivado':
 isAll = true
 if (!isROwner) {
@@ -242,6 +251,8 @@ if (!/[01]/.test(command)) return await conn.reply(m.chat, `╭┄┄≪ *「 �
 ➵ _${usedPrefix}disable *antitoxic*_
 ➵ _${usedPrefix}enable *autolevelup*_
 ➵ _${usedPrefix}disable *autolevelup*_
+➵ _${usedPrefix}enable *nsfw*_
+➵ _${usedPrefix}disable *nsfw*_
 ➵ _${usedPrefix}enable *simi*_
 ➵ _${usedPrefix}disable *simi*_
 ➵ _${usedPrefix}enable *detect*_
