@@ -11,6 +11,23 @@ Bot en desarrollo
 <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white">
 </a>
 
+# 🍓 Características del bot 
+|  Funciones y comandos  |                                           Sip |
+| :---------------------------------------------: | :-----------: |
+| Crea stickers|✔️|
+| Bienvenida automática|✔️|
+| Anti-Link|✔️|
+| Anti-Fakes|✔️|
+| Jadibot |✔️|
+| Anti-Llamadas|✔️|
+| Anti-Privados|✔️|
+| Modo Publico/Privado|✔️|
+| Anime|pronto|
+| Juegos|✔️|
+| Descarga de música/videos|✔️|
+| ChatBot|✔️|
+| Más funciones en adelante|♻️|
+
 ### `⚙️ AJUSTES ⚙️`
 - CAMBIAR NÚMERO DE PROPIETARIO [aqui](https://github.com/Undefined17/CuriosityBot-MD/blob/main/config.js#L6)
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/Undefined17/CuriosityBot-MD/fork)
