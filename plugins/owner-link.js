@@ -42,7 +42,7 @@ const grupo = `｡ﾟﾟ･｡･ﾟﾟ｡
 let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
   let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'CuriosityBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unirte a mi grupo ^~^', 'jpegThumbnail': false }}}
-
+try {
   if (!text) throw `⚠️ *Ingrese el link de un grupo de WhatsApp.*`
   let [_, code, expired] = text.match(linkRegex) || []
   if (!code) throw '❎ El link es invalido'
@@ -53,8 +53,9 @@ let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
   await conn.sendMessage(res, { text: grupo, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res)
   await m.reply(`*Ya se spameo el grupo :D*`)
-}
-
+} catch (e) {
+await m.reply(`ERROR 404 :v`) 
+}}
 handler.help = ['spamgp']
 handler.tags = ['owner']
 handler.command = ['spamgp'] 
