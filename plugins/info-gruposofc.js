@@ -8,16 +8,19 @@ let texto = `🍿 *＊•̩̩͙✩•̩̩͙˚ GRUPOS OFC ˚•̩̩͙✩•̩̩͙
 *✦ ${nn}*
 
 *✧ CURIOSITYBOT - GLOBAL 🌎*
-╭┉┉┅┄┄•◦ೋ•◦❥•◦ೋ ${nnn}         
-•◦ೋ•◦❥•◦ೋ•┈┄┄┅┉╯
+╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
+${nnn}         
+╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄╯
 
-*✧ENLACE CURIOSITYBOT*
-╭┉┉┅┄┄•◦ೋ•◦❥•◦ೋ ${nnnnn}         
-•◦ೋ•◦❥•◦ೋ•┈┄┄┅┉╯
+*✧ ENLACE CURIOSITYBOT 🍓* 
+╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
+ ${nnnnn}
+╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄╯
 
-*✧ GRUPO COLABORACIÓN (MULTI BOTS)*
-╭┉┉┅┄┄•◦ೋ•◦❥•◦ೋ ${nnnn}         
-•◦ೋ•◦❥•◦ೋ•┈┄┄┅┉╯`
+*✧ GRUPO COLABORACIÓN (MULTI BOTS) 💖*
+╭┄┄┄┄┄┄┄┄┄┄┄┄┄┄╮
+${nnnn}         
+╰┄┄┄┄┄┄┄┄┄┄┄┄┄┄╯`
 
 
 await conn.sendFile(m.chat, foto, 'Curiosity.jpg', texto, estilo)}
