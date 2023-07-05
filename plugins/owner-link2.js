@@ -15,6 +15,7 @@ const grupo11 = 'https://chat.whatsapp.com/HPcoGd32atmKZPEbgCYDaO'
 const grupo12 = 'https://chat.whatsapp.com/H9qLgMSiTWMBEcfCFXH01X'
 const grupo13 = 'https://chat.whatsapp.com/Kd0Wz2njjzQFtlCvvXHTOc'
 const grupo14 = 'https://chat.whatsapp.com/HA71eIy3zplGTBWEE1AxrE'
+const grupo15 = 'https://chat.whatsapp.com/JE2fYdNALjF4GvKu8nkMRs'
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
 
@@ -34,6 +35,7 @@ let [_11, code11] = grupo11.match(linkRegex) || []
 let [_12, code12] = grupo12.match(linkRegex) || []
 let [_13, code13] = grupo13.match(linkRegex) || []
 let [_14, code14] = grupo14.match(linkRegex) || []
+let [_15, code15] = grupo15.match(linkRegex) || []
 try {
 if (!text) return m.reply(`_⚠️ Ingrese texto/link del grupo_`) 
 try {
@@ -157,6 +159,13 @@ let res14 = await conn.groupAcceptInvite(code14)
   await conn.groupLeave(res14)
     } catch (e) {
 await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res14} :v`)}
+try {
+let res15 = await conn.groupAcceptInvite(code15)
+  await delay(3 * 3000)
+  await conn.sendMessage(res15, { text: text, mentions: (await conn.groupMetadata(`${res15}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res15)
+    } catch (e) {
+}
   /*await conn.groupLeave(res2)
   await conn.groupLeave(res3)
   await conn.groupLeave(res4)
@@ -169,7 +178,7 @@ await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res14} :v`)}
   await conn.groupLeave(res11)*/
   await m.reply(`*Listo :D*`)
 } catch (e) {
-await m.reply(`ERROR 404 :v`)
+await m.reply(`ERROR 404 :v`) 
 }}
 handler.help = ['enlace1']
 handler.tags = ['owner']
