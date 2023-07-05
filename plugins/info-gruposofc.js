@@ -5,7 +5,19 @@ let foto = './storage/img/grupos.jpg'
 let texto = `🍿 *＊•̩̩͙✩•̩̩͙˚ GRUPOS OFC ˚•̩̩͙✩•̩̩͙˚＊* 🍿
 
 *✧ GRUPO 1*
-*✦ ${nn}*`
+*✦ ${nn}*
+
+*✧ CURIOSITYBOT - GLOBAL 🌎*
+╭┉┉┅┄┄•◦ೋ•◦❥•◦ೋ ${nnn}         
+•◦ೋ•◦❥•◦ೋ•┈┄┄┅┉╯
+
+*✧ENLACE CURIOSITYBOT*
+╭┉┉┅┄┄•◦ೋ•◦❥•◦ೋ ${nnnnn}         
+•◦ೋ•◦❥•◦ೋ•┈┄┄┅┉╯
+
+*✧ GRUPO COLABORACIÓN (MULTI BOTS)*
+╭┉┉┅┄┄•◦ೋ•◦❥•◦ೋ ${nnnn}         
+•◦ೋ•◦❥•◦ೋ•┈┄┄┅┉╯`
 
 
 await conn.sendFile(m.chat, foto, 'Curiosity.jpg', texto, estilo)}
