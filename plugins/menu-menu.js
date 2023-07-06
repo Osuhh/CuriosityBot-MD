@@ -85,7 +85,6 @@ let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
 ║╭──────────────
 ║├⫹⫺ *Creador :* ${azami}
 ║├⫹⫺ *Numero:* wa.me/59894808483
-║├⫹⫺ *${(conn.user.jid == global.conn.user.jid ? '' : `Jadibot de :* https://wa.me/${global.conn.user.jid.split`@`[0]}`) || 'Bot Ofc :* wa.me/56962237366'}
 ║├⫹⫺ *Prefix :* ${usedPrefix}
 ║├⫹⫺ *Tiempo Activo:* ${uptime}
 ║├⫹⫺ *Registrado :* ${rtotalreg} de ${totalreg} usuarios
