@@ -5,26 +5,21 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
-  'main': 'ACERCA DE',
-  'game': 'JUEGOS',
-  'econ': 'NIVEL & ECONOMIA',
-  'rg': 'REGISTRO',
+  'main': 'I N F O R M A C I Ó N ',
+  'game': 'J U E G O S',
+  'rg': 'R P G',
   'sticker': 'STICKER',
-  'img': 'IMAGEN',
-  'maker': 'MAKER',
+  'audio': 'A U D I O S   E F E C T O S', 
   'prem': 'PREMIUM',
-  'group': 'GRUPO',
-  'nable': 'EN/DISABLE OPCIONES', 
-  'nime': 'ANIME',
-  'rnime': 'ANIME REACCION',
-  'dl': 'DESCARGAS',
-  'tools': 'TOOLS',
-  'fun': 'FUN',
-  'cmd': 'DATABASE',
+  'group': 'G R U P O S',
+  'nable': 'E N A B L E / D I S A B L E', 
+  'convertido': 'C O N V E R T I D O R E S', 
+  'dl': ' D E S C A R G A S',
+  'internet': 'B U S C A D O R E S',
+  'jadibot': 'J A D I B O T', 
+  'tools': 'H E R R A M I E N T A S', 
   'nsfw': 'NSFW +18', 
-  'ansfw': 'NSFW ANIME',
-  'owner': 'OWNER', 
-  'advanced': 'AVANZADO',
+  'owner': 'O W N E R', 
 }
 const defaultMenu = {
   before: `
@@ -40,9 +35,8 @@ const defaultMenu = {
 
 ╔═══[ ＩＮＦＯＢＯＴ ]═══╗
 ║╭──────────────
-║├⫹⫺ *Creador :* %azami
+║├⫹⫺ *Creador :* Azami 
 ║├⫹⫺ *Numero:* wa.me/59894808483
-║├⫹⫺ *Prefix :* %usedPrefix
 ║├⫹⫺ *Tiempo Activo:* %muptime
 ║├⫹⫺ *Registrado :* %rtotalreg de %totalreg usuarios
 ║╰────────────── 
@@ -96,6 +90,23 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         process.once('message', resolve)
         setTimeout(resolve, 1000)
       }) * 1000
+    }
+    const ftrol = {
+    key : {
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net'
+    },
+    message: {
+    orderMessage: {
+    itemCount : 2023,
+    status: 1,
+    surface : 1,
+    message: `Hola ${name}!`, 
+    orderTitle: `▮Menu ▸`,
+    thumbnail: await (await fetch(pp)).buffer(), //Gambarnye
+    sellerJid: '0@s.whatsapp.net' 
+    }
+    }
     }
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
@@ -156,9 +167,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-    let pp = './storage/menus/Menu2.jpg'
-     
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, nnn)
+    let pp = './storage/img/Menu2.jpg'
+     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, nna)
     /*conn.sendButton(m.chat, text.trim(), '▢ DyLux  ┃ ᴮᴼᵀ\n▢ Sígueme en Instagram\nhttps://www.instagram.com/fg98_ff', pp, [
       ['ꨄ︎ Apoyar', `${_p}donate`],
       ['⏍ Info', `${_p}botinfo`],
@@ -168,7 +179,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     m.react('🚀') 
     
   } catch (e) {
-    conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error', m)
+    conn.reply(m.chat, '⚠️ Lo sentimos, el menú tiene un error', m)
     throw e
   }
 }
