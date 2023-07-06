@@ -24,7 +24,7 @@ let handler = async (m, { conn }) => {
  conn.sendFile(m.chat, pp, 'perfil.jpg', str, fkon, false, { mentions: [who] })
 }
 handler.help = ['profile [@user]']
-handler.tags = ['exp']
+handler.tags = ['rg']
 handler.command = /^perfil|pp$/i
 export default handler
 

@@ -52,7 +52,7 @@ m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 //conn.sendFile(m.chat, vn, 'otaku.mp3', null, m, true, { type: 'audioMessage', ptt: true })
 }}
 handler.help = handler.command = ['topgays','topotakus']
-handler.tags = ['games']
+handler.tags = ['game']
 handler.group = true
 handler.register = true 
 export default handler  

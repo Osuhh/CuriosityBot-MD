@@ -12,6 +12,7 @@ let handler = async (m, { conn, text }) => {
 	await conn.reply(m.chat, groupinfo, m)
 	//m.reply(txt)
 }
+handler.tags = ['tools']
 handler.command = /^(inspect)$/i
 
 export default handler

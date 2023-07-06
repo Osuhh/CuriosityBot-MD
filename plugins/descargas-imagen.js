@@ -10,7 +10,7 @@ conn.sendFile(m.chat, link, 'error.jpg', `*––––『 GOOGLE IMAGENES 』�
 📡 *Buscado en:* Google`, fkontak, m) 
 }
 handler.help = ['gimage <query>', 'imagen <query>']
-handler.tags = ['internet', 'tools']
+handler.tags = ['dl']
 handler.command = /^(gimage|image|imagen)$/i
 handler.exp = 20
 handler.register = true

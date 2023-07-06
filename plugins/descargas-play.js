@@ -69,7 +69,7 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
   }
 }
 handler.command = handler.help = ['play','song','youtube','ytmp3','ds','downloadyt','yta'];
-handler.tags = ['downloader'];
+handler.tags = ['dl'];
 handler.exp = 0;
 handler.diamond = true
 handler.premium = false;

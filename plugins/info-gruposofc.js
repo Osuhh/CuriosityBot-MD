@@ -27,6 +27,7 @@ ${nnnn}
 
 await conn.sendFile(m.chat, foto, 'Curiosity.jpg', texto, estilo)}
 
+handler.tags = ['main']
 handler.command = /^gruposcb|grupos|groups$/i
 handler.exp = 35
 handler.register = true

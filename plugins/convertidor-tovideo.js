@@ -20,6 +20,6 @@ out = await ffmpeg(media, [
 await conn.sendFile(m.chat, out, 'error.mp4', '*AQUI ESTA TU VIDEO ✨*', m, 0, { thumbnail: out })
 }
 handler.help = ['tovideo']
-handler.tags = ['sticker']
+handler.tags = ['convertido']
 handler.command = ['tovideo']
 export default handler

@@ -16,7 +16,7 @@ let exppremium = `${pickRandom([1000, 1500, 1800, 2100, 2500, 2900, 3300, 3600, 
   global.db.data.users[m.sender].lastclaim = new Date * 1
 }
 handler.help = ['daily']
-handler.tags = ['econ']
+handler.tags = ['rg']
 handler.command = ['daily', 'claim'] 
 handler.register = true
 

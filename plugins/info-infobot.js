@@ -62,7 +62,7 @@ let res = generateWAMessageFromContent (m.chat, {liveLocationMessage: {degreesLa
 conn.relayMessage(m.chat, res.message, {})
 }
 handler.help = ['infobot', 'speed']
-handler.tags = ['info', 'tools']
+handler.tags = ['main']
 handler.command = /^(infobot|Infobot)$/i
 export default handler
 

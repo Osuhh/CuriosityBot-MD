@@ -28,5 +28,6 @@ await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimet
 await conn.reply(m.chat, `*⚠️ ES POSIBLE QUE EL VIDEO SEA MUY PESADO. INTENTE CON OTRA OPCIÓN DE DESCARGA*`, fkontak, m)
 m.react(error)}
 }}
+handler.tags = ['dl']
 handler.command = /^fgmp4|dlmp4|getvid|yt(v|mp4)?$/i 
 export default handler

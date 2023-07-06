@@ -15,7 +15,7 @@ if (!text) return conn.reply(m.chat, `*⚠️ ESCRIBA EL NOMBRE DE UN VIDEO O UN
   conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, fkontak, m)
 }
 handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
-handler.tags = ['tools']
+handler.tags = ['internet']
 handler.command = /^playlist|ytbuscar|yts(earch)?$/i
 handler.exp = 70
 handler.limit = 1

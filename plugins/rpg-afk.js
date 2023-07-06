@@ -15,7 +15,7 @@ let handler = async (m, { conn, text }) => {
   `, m, { mentions: [m.sender]})
 }
 handler.help = ['afk *<razón>*']
-handler.tags = ['rpg']
+handler.tags = ['rg']
 handler.command = ['afk']
 handler.register = true
 

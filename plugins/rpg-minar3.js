@@ -16,7 +16,7 @@ conn.reply(m.chat, `*${minar} ${d} Diamantes 💎*`, fkontak, m)
 
 }
 handler.help = ['minar']
-handler.tags = ['diamantes']
+handler.tags = ['rg']
 handler.command = ['minar3', 'miming3', 'mine3', 'minardiamantes', 'minargemas', 'minardiamante'] 
 handler.fail = null
 handler.exp = 0

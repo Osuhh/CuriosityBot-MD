@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     m.react('🤣') 
 }
 handler.help = ['meme']
-handler.tags = ['img']
+handler.tags = ['sticker']
 handler.command = ['meme', 'memes'] 
 handler.diamond = true
 handler.register = true

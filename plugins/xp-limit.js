@@ -17,6 +17,6 @@ m.reply(`*${global.db.data.users[who].diamond} Límite restante (⁠≧⁠▽⁠
 
 }
 handler.help = ['limit [@user]']
-handler.tags = ['xp']
+handler.tags = ['rg']
 handler.command = /^(limit)$/i
 export default handler

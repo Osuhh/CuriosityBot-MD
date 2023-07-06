@@ -60,6 +60,7 @@ reportError(e)}
 }}  
 }}
   
+handler.tags = ['dl']
 handler.command = /^(facebook|fb|facebookdl|fbdl)$/i
 handler.diamond = true
 export default handler

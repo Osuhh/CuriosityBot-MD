@@ -12,7 +12,7 @@ m.reply(`🏢 ${pickRandom(global.work)} *${curiosity} XP*`)
 global.db.data.users[m.sender].lastwork = new Date * 1
 }
 handler.help = ['work']
-handler.tags = ['xp']
+handler.tags = ['rg']
 handler.command = ['work', 'trabajar']
 handler.fail = null
 handler.exp = 0

@@ -8,7 +8,7 @@ user.registered = false
 m.reply(`*📇 USTED YA NO ESTÁ REGISTRADO*`)
 }
 handler.help = ['', 'ister'].map(v => 'unreg' + v + ' <numero de serie>')
-handler.tags = ['xp']
+handler.tags = ['rg']
 handler.command = /^unreg(ister)?$/i
 handler.register = true
 export default handler

@@ -10,6 +10,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 mentions: m.mentionedJid
 } : {})}
 handler.help = ['pregunta <texto>?']
-handler.tags = ['kerang']
+handler.tags = ['game']
 handler.command = /^pregunta|preguntas|apakah$/i
 export default handler

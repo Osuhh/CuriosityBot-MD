@@ -23,5 +23,6 @@ await conn.sendMessage(m.chat, { audio: { url: lolh.result.link }, fileName: `${
 } catch {
 }
 }}
+handler.tags = ['dl']
 handler.command = /^fgmp3|dlmp3|getaud|yt(a|mp3)$/i
 export default handler

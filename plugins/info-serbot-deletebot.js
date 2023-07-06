@@ -41,7 +41,7 @@ let handler  = async (m, { conn }, args) => {
   }
 
   handler.help = ['delete']
-  handler.tags = ['General']
+  handler.tags = ['jadibot']
   handler.command = /^(deletebot)$/i
   handler.owner = false
   handler.mods = false

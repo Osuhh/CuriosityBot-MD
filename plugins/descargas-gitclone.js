@@ -12,7 +12,7 @@ conn.sendFile(m.chat, url, filename, null, m)
 
 }
 handler.help = ['gitclone <url>']
-handler.tags = ['downloader']
+handler.tags = ['dl']
 handler.command = /gitclone|clonarepo|clonarrepo|repoclonar/i
 handler.exp = 59
 export default handler

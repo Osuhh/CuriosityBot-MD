@@ -7,6 +7,7 @@ else who = m.chat
 let users = global.db.data.users
 users[who].banned = true
 m.reply('*⚠️ EL USUARIO FUE BANEADO CON EXITO*\n\n😔 EL USUARIO NO PODRA USAR EL BOT')    }
+handler.tags = ['owner']
 handler.command = /^banuser$/i
 handler.rowner = true
 export default handler

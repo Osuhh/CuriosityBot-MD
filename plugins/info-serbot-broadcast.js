@@ -13,6 +13,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   ${users.map(v => '👉🏻 wa.me/' + v.replace(/[^0-9]/g, '') + `?text=${encodeURIComponent(usedPrefix)}estado`).join('\n')}
   \n*Se finalizo con el envió en ${users.length * 1.5} segundos aproximadamente*`.trim(), m)
   }
+  handler.tags = ['jadibot']
   handler.command = /^bcbot$/i
   handler.rowner = true
   handler.mods = false

@@ -5,7 +5,7 @@ let sn = createHash('md5').update(m.sender).digest('hex')
 conn.fakeReply(m.chat, sn, '0@s.whatsapp.net', '⬇️ *ESE ES SU NUMERO DE SERIE* ⬇️', 'status@broadcast')
 }
 handler.help = ['myns']
-handler.tags = ['xp']
+handler.tags = ['rg']
 handler.command = /^(myns|ceksn)$/i
 handler.register = true
 export default handler

@@ -44,6 +44,7 @@ case "kickfantasmas":
        }
 break            
 }}
+handler.tags = ['group']
 handler.command = /^(fantasmas|kickfantasmas)$/i
 handler.group = handler.botAdmin = handler.admin = true
 handler.fail = null

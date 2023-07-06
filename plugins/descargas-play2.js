@@ -68,7 +68,7 @@ if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n
 }
 
 handler.command = handler.help = ['play2', 'playvideo']
-handler.tags = ['downloader']
+handler.tags = ['dl']
 handler.exp = 0
 handler.diamond = true 
 handler.premium = false

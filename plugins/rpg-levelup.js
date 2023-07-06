@@ -48,7 +48,7 @@ let user = global.db.data.users[m.sender]
 }
 
 handler.help = ['levelup']
-handler.tags = ['xp']
+handler.tags = ['rg']
 
 handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
 

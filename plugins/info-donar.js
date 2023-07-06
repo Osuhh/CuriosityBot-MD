@@ -10,7 +10,7 @@ let str = `*「 🌟 DONAR 🌟 」*
 💬 wa.me/59894808483`
 
 await conn.sendFile(m.chat, media, 'Curiosity.jpg', str, fkontak)}
-
+handler.tags = ['main']
 handler.command = /^donar|donate|donasi$/i
 handler.exp = 35
 handler.register = true

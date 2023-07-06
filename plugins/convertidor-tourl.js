@@ -31,7 +31,7 @@ conn.reply(m.chat, info, m, { contextInfo: {
   })
 }
 handler.help = ['tourl']
-handler.tags = ['herramientas']
+handler.tags = ['convertido']
 handler.command = /^(tourl|upload)$/i
 export default handler
 

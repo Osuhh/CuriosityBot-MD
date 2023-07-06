@@ -22,5 +22,6 @@ await m.reply('*Traducción:* ' + result2)
 } catch { 
 await m.reply('*[❗𝐈𝐍𝐅𝐎❗] ERROR, VUELVA A INTENTARLO*')    
 }}}
+handler.tags = ['tools']
 handler.command = /^(translate|traducir|trad)$/i
 export default handler

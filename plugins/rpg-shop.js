@@ -13,7 +13,7 @@ let handler = async (m, { conn, command, args }) => {
   } else conn.reply(m.chat, `*⚠️ NO TIENES SUFICIENTE XP PARA COMPAR ${count} DIAMANTES 💎*`, m)
 }
 handler.help = ['buy', 'buyall']
-handler.tags = ['econ']
+handler.tags = ['rg']
 handler.command = ['buy', 'buyall'] 
 handler.register = true
 handler.disabled = false

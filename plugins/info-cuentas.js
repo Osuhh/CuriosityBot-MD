@@ -15,6 +15,7 @@ let str = `*[ CUENTAS OFICIALES ]*
 
 await conn.sendFile(m.chat, media, 'gata.mp4', str, fkontak)}
 
+handler.tags = ['main']
 handler.command = /^cuentasoficiales|cuentasofc|cuentas$/i
 handler.exp = 35
 handler.register = true

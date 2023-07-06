@@ -39,7 +39,7 @@ m.reply(`*⚠️ VUELVA A INTENTARLO. DEBE DE SER UN ENLACE VALIDO DE MEDIAFIRE*
 console.log(e)
 }}
 handler.help = ['mediafire <url>']
-handler.tags = ['downloader']
+handler.tags = ['dl']
 handler.command = ['mediafire', 'mfire'] 
 handler.diamond = true
 handler.premium = false

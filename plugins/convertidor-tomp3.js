@@ -13,6 +13,6 @@ if (!audio.data && !/video/.test(mime)) throw '*⚠️ OCURRIÓ UN ERROR, VUELVA
 conn.sendFile(m.chat, audio.data, 'error.mp3', '', m, null, { mimetype: 'audio/mp4' })
 }
 handler.help = ['tomp3 (reply)']
-handler.tags = ['audio']
+handler.tags = ['convertido']
 handler.command = /^to(mp3|a(udio)?)$/i
 export default handler

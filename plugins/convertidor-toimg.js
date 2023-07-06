@@ -11,6 +11,6 @@ let out = await webp2png(media).catch(_ => null) || Buffer.alloc(0)
 await conn.sendFile(m.chat, out, 'error.png', null, fkontak, m)
 }
 handler.help = ['toimg (reply)']
-handler.tags = ['sticker']
+handler.tags = ['convertido']
 handler.command = ['toimg', 'jpg', 'png']
 export default handler

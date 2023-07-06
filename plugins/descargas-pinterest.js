@@ -11,7 +11,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 `.trim(), m)
 }
 handler.help = ['pinterest <keyword>']
-handler.tags = ['internet']
+handler.tags = ['dl']
 handler.command = /^(pinterest)$/i
 
 export default handler

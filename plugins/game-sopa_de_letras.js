@@ -163,5 +163,6 @@ return
 }}
 }}
 
+handler.tags = ['game']
 handler.command = /^(buscarpalabra|sopa|soup|wordsearch|wordfind|spdeletras|spletras|sppalabras|spalabras|spdepalabras)$/i
 export default handler

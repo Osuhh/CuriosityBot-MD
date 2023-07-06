@@ -28,7 +28,7 @@ import * as fs from 'fs'
  } 
   
  handler.help = ['hidetag'].map(v => v + ' [mensaje]') 
- handler.tags = ['grupos', 'admins'] 
+ handler.tags = ['group']
  handler.command = /^(totag|hidetag)$/i 
   
  handler.group = true 
