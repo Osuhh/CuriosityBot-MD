@@ -24,8 +24,7 @@ let totalreg = Object.keys(global.db.data.users).length
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 
-let pp = './storage/menus/Menu1.jpg'
-//let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./storage/menus/Menu3.jpg'), thumbnail: fs.readFileSync('./storage/menus/Menu3.jpg'),sendEphemeral: true}}}
 const ftrol = {
     key : {
@@ -262,7 +261,7 @@ let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
 ║ႌ〬⫹⫺ ${usedPrefix}unbanuser
 〬╚════ ≪ •❈• ≫ ════╝`
 function _0x2daf() {
-    const _0x4c1076 = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/menus/Menu3.jpg', '1019845zOpQQK', 'pdf', 'chat'];
+    const _0x4c1076 = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/menus/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat'];
     _0x2daf = function() {
         return _0x4c1076;
     };
@@ -313,7 +312,7 @@ let buttonMessage = {
             'mediaType': 0x1,
             'previewType': "PHOTO",
             'title': 'Hola!!',
-            'thumbnail': fs.readFileSync('./storage/img/Menu2.jpg'),
+            'thumbnail': fs.readFileSync('./storage/img/Menu1.jpg'),
             'renderLargerThumbnail': !![],
             'sourceUrl': yt
         }
