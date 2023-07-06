@@ -1,6 +1,6 @@
 import cheerio from 'cheerio'
 import gpt from 'api-dylux'
-let handler = async (m, { conn, text }) => {
+let handler = async (m, { conn, text, usedPrefix, command }) => {
 	
 if (!text) throw `*⚠️ Ingresa el texto*\n\n*📌 Ejemplo de uso:*\n${usedPrefix + command}paso para crea una pagina`
 m.react('💬')
