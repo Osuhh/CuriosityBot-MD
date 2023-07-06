@@ -32,6 +32,7 @@ await conn.sendFile(m.chat, url5, 'error.mp4', `*ᴅɪsғʀᴜᴛᴀ ᴅᴇʟ �
 //await conn.sendButton(m.chat, `*ᴅɪsғʀᴜᴛᴀ ᴅᴇʟ ᴠɪᴅᴇᴏ 🥵*`, author, url5, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `${usedPrefix + command}`]], m)    
 break    
 }}
+handler.tags = ['nsfw']
 handler.command = /^(pack|pack2|pack3|videoxxx|vídeoxxx|videoxxxlesbi|videolesbixxx|pornolesbivid|pornolesbianavid|pornolesbiv|pornolesbianav|pornolesv)$/i
 handler.diamond = true
 handler.register = true
