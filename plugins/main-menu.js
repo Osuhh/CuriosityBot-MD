@@ -158,7 +158,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     
     let pp = './storage/menus/Menu2.jpg'
      
-    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, rpl)
+    conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, nna)
     /*conn.sendButton(m.chat, text.trim(), '▢ DyLux  ┃ ᴮᴼᵀ\n▢ Sígueme en Instagram\nhttps://www.instagram.com/fg98_ff', pp, [
       ['ꨄ︎ Apoyar', `${_p}donate`],
       ['⏍ Info', `${_p}botinfo`],
@@ -174,7 +174,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 }
 handler.help = ['help']
 handler.tags = ['main']
-handler.command = ['help', 'menúcompleto'] 
+handler.command = ['help', 'menucompleto'] 
 handler.register = true
 
 handler.exp = 3
