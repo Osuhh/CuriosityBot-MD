@@ -8,7 +8,7 @@ if (!global.db.data.chats[m.chat].nsfw) throw `🚫 El grupo no admite contenido
 switch (command) {
 case "pack": 
 let url = await pack[Math.floor(Math.random() * pack.length)]
-await conn.sendFile(m.chat, url, 'error.jpg', `_🥵 Pack 🥵_`, m)
+conn.sendFile(m.chat, url, '', '_🥵 Pack 🥵_', m)
 //conn.sendButton(m.chat, `_🥵 Pack 🥵_`, author, url, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `${usedPrefix + command}`]], m)
 break
 case "pack2":  
