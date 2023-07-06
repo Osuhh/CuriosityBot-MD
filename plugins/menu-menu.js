@@ -85,6 +85,7 @@ let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
 ║╭──────────────
 ║├⫹⫺ *Creador :* ${azami}
 ║├⫹⫺ *Numero:* wa.me/59894808483
+║├⫹⫺ *${(conn.user.jid == global.conn.user.jid ? '' : 'Jadibot de :* https://wa.me/${global.conn.user.jid.split`@`[0]}') || 'Bot Ofc :* wa.me/56962237366'}
 ║├⫹⫺ *Prefix :* ${usedPrefix}
 ║├⫹⫺ *Tiempo Activo:* ${uptime}
 ║├⫹⫺ *Registrado :* ${rtotalreg} de ${totalreg} usuarios
@@ -320,7 +321,7 @@ let buttonMessage = {
 }
 await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)], buttonMessage, { 'quoted': fkontak })
 } catch {
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
+conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR USE EL MENUCOMPLETO CON (.menucompleto)*', m)
 }}
 handler.command = /^(menu)$/i
 handler.register = true
