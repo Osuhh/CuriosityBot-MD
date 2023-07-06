@@ -18,12 +18,12 @@ let tags = {
   'internet': 'B U S C A D O R E S',
   'jadibot': 'J A D I B O T', 
   'tools': 'H E R R A M I E N T A S', 
+  'anime': 'A N I M E', 
   'nsfw': 'NSFW +18', 
   'owner': 'O W N E R', 
 }
 const defaultMenu = {
-  before: `
-╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
+  before: `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
 ║╭──────────────
 ║├⫹⫺ *Nombre :* %name
 ║├⫹⫺ *Limite :* %diamond
@@ -47,7 +47,7 @@ const defaultMenu = {
 〬╚═════ ≪ •❈• ≫ ═════╝
 %readmore
 `.trimStart(),
-  header: '╔══「  *%category* 」═╗',
+  header: '╔══「 %category 」═╗',
   body: '║ႌ〬⫹⫺  %cmd %isdiamond %isPremium',
   footer: '╚════ ≪ •❈• ≫ ════╝\n',
   after: `
