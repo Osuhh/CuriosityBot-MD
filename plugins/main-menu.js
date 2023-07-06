@@ -91,23 +91,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         setTimeout(resolve, 1000)
       }) * 1000
     }
-    const ftrol = {
-    key : {
-    remoteJid: 'status@broadcast',
-    participant : '0@s.whatsapp.net'
-    },
-    message: {
-    orderMessage: {
-    itemCount : 2023,
-    status: 1,
-    surface : 1,
-    message: `Hola ${name}!`, 
-    orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch(pp)).buffer(), //Gambarnye
-    sellerJid: '0@s.whatsapp.net' 
-    }
-    }
-    }
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.db.data.users).length
@@ -168,7 +151,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
     let pp = './storage/img/Menu2.jpg'
-     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
+    // await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
     conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m, null, nna)
     /*conn.sendButton(m.chat, text.trim(), '▢ DyLux  ┃ ᴮᴼᵀ\n▢ Sígueme en Instagram\nhttps://www.instagram.com/fg98_ff', pp, [
       ['ꨄ︎ Apoyar', `${_p}donate`],
