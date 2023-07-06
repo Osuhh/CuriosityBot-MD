@@ -39,7 +39,7 @@ case 'lesbian':
    m.react(xmoji) 
 break
 
-case 'pack':
+//case 'pack':
 case 'cosplay':
 	     let img = await conn.getFile(global.API('fgmods', '/api/nsfw/cosplay', {}, 'apikey'))
         conn.sendFile(m.chat, img.data, 'img.jpg', `✅ Resultado 🤭`, m)
@@ -50,9 +50,9 @@ case 'cosplay':
 default:
  }
 }
-handler.help = ['ass', 'boobs', 'lesbian', 'pussy', 'pack']
+handler.help = ['ass', 'boobs', 'lesbian', 'pussy']
 handler.tags = ['nsfw']
-handler.command = /^(ass|culos|boobs|boobies|lesbian|lesbians|pussy|cosplay|pack)$/i
+handler.command = /^(ass|culos|boobs|boobies|lesbian|lesbians|pussy|cosplay)$/i
 handler.diamond = true
 handler.register = true
 handler.group = true
