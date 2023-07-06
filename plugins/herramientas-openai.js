@@ -2,7 +2,7 @@ import cheerio from 'cheerio'
 import gpt from 'api-dylux'
 let handler = async (m, { conn, text }) => {
 	
-if (!text) throw `✳️ Ingresa el texto`
+if (!text) throw `*⚠️ Ingresa el texto*\n\n*📌 Ejemplo de uso:*\n${usedPrefix + command}paso para crea una pagina`
 m.react('💬')
 
 	try {
@@ -11,7 +11,7 @@ m.react('💬')
         let res = await gpt.ChatGpt(text, syms)
          await m.reply(res.text)
 	} catch {
-		m.reply(`❎ Error: intenta más tarde`)
+		m.reply(`⚠️ Error: intenta más tarde`)
 	}
 
 }
