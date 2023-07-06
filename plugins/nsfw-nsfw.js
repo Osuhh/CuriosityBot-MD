@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     let user = global.db.data.users[m.sender].age
     if (user < 15) throw m.reply(`😐 ᴇʀᴇs ᴍᴇɴᴏʀ ᴅᴇ ᴇᴅᴀᴅ! ᴠᴜᴇʟᴠᴇ ᴄᴜᴀɴᴅᴏ ᴛᴇɴɢᴀs ᴍᴀs ᴅᴇ 15 ᴀñᴏs`) 
    
-m.react(rwait)
+m.react('🥵') 
 let type = (command).toLowerCase()
 
 switch (type) {
