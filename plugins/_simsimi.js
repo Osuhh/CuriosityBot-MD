@@ -1,12 +1,10 @@
 import fetch from 'node-fetch'
-import db from '../lib/database.js'
 let handler = m => m
 
-export async function before(m) {
+handler.before = async (m) => {
 let chat = global.db.data.chats[m.chat]
-if (chat.simi && !chat.isBanned && !m.fromMe) {
-if (m.text.startsWith(prefix)) return
-//if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return
+if (chat.simi) {
+if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return
 let textodem = m.text  
 try {
 await conn.sendPresenceUpdate('composing', m.chat)
