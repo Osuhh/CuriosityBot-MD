@@ -2,7 +2,7 @@ import fs from "fs"
 let handler = m => m
 handler.all = async function (m) {
 let botxd = `*🚀 Hola soy un bot*`
-let vn = [imagen1, imagen2, imagen3, imagen4].getRandom()
+let vn = [imagen5, imagen6, imagen7, imagen8].getRandom()
 let chat = global.db.data.chats[m.chat]
 const estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: {orderMessage: { itemCount : 2023, status: 1, surface : 1, message: 'Super WhatsApp Bot 🚀', orderTitle: 'Bang', thumbnail: fs.readFileSync('./storage/menus/Menu2.jpg'), sellerJid: '0@s.whatsapp.net'}}}
 //const estiloaudio = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: {"audioMessage": { "mimetype":"audio/ogg; codecs=opus", "seconds": "99569", "ptt": "true"}}}  
