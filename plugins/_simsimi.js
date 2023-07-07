@@ -1,7 +1,8 @@
 import fetch from 'node-fetch'
+import db from '../lib/database.js'
 let handler = m => m
 
-handler.before = async (m) => {
+export async function before(m) {
 let chat = global.db.data.chats[m.chat]
 if (chat.simi && !chat.isBanned && !m.fromMe) {
 if (m.text.startsWith(prefix)) return
