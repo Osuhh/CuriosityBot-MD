@@ -1,11 +1,12 @@
 import fetch from 'node-fetch'
 import db from '../lib/database.js'
 
-export async function before(m) {
-    let chat = db.data.chats[m.chat]
+handler.before = async (m) => {
+let chat = global.db.data.chats[m.chat]
     if (chat.simi && !chat.isBanned && !m.fromMe) {
     	if (m.text.startsWith(prefix)) return
         if (!m.text) return
+        await conn.sendPresenceUpdate('composing', m.chat)
         let ressimi = await fetch(`https://api.simsimi.net/v2/?text=${encodeURIComponent(m.text)}&lc=es`)
         if (!ressimi.ok) throw 'No dispoble :v'
         let data = await ressimi.json();
