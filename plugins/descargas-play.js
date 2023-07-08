@@ -45,7 +45,7 @@ import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/
     title: "",
     body: "CuriosityBot-MD",
     thumbnailUrl: tmb ,
-    sourceUrl: web,
+    sourceUrl: md,
     mediaType: 1,
     showAdAttribution: true,
     renderLargerThumbnail: true
