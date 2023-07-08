@@ -34,9 +34,9 @@ if (!text) throw `*⚠️ INGRESE EL NOMBRE DE LA CANCIÓN QUE ESTÁ BUSCANDO*\n
       contextInfo: {
         externalAdReply: {
           title: "",
-          body: "https://chat.whatsapp.com/J1R402WH1N0Hdl3S0NDEYu",
+          body: "CuriosityBot-MD",
           thumbnailUrl: tmb ,
-          sourceUrl: vide,
+          sourceUrl: md,
           mediaType: 1,
           showAdAttribution: true,
           renderLargerThumbnail: true
