@@ -18,9 +18,8 @@ let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
 let name = conn.getName(m.sender)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-let { exp, diamond, level, role, money } = global.db.data.users[m.sender]
-let totalreg = Object.keys(global.db.data.users).length
-    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+let { exp, limit, level, role, money } = global.db.data.users[m.sender]
+let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 
@@ -55,7 +54,7 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
  const fload = {
     key : {
     remoteJid: 'status@broadcast',
-    participant : '0@s.whatsapp.net' 
+    participant : '0@s.whatsapp.net'
     },
     message: {
     orderMessage: {
@@ -71,203 +70,159 @@ let td = `${pickRandom([d1,d2,d3,d4,d5,d6])}`
     }
     await conn.reply(m.chat, '*Enviando el menu . . .*', ftrol) 
 m.react('🚀')     
-let menu = `╔═══[ ＵＳＵＡＲＩＯＳ ]═══╗
-║╭──────────────
-║├⫹⫺ *Nombre :* ${name}
-║├⫹⫺ *Limite :* ${diamond}
-║├⫹⫺ *Nivel :* ${level}
-〬║├⫹⫺ *Rango :* ${role}
-║├⫹⫺ *Exp :* ${exp}
-║╰──────────────
-╚══════════════════⋆
+let menu = `*❏──── 「 MENU 」 ────❏*
 
-╔═══[ ＩＮＦＯＢＯＴ ]═══╗
-║╭──────────────
-║├⫹⫺ *Creador :* ${azami}
-║├⫹⫺ *Numero:* wa.me/59894808483
-║├⫹⫺ *${(conn.user.jid == global.conn.user.jid ? '' : 'Jadibot de :* https://wa.me/${global.conn.user.jid.split`@`[0]}') || 'Bot Ofc :* wa.me/56962237366'}
-║├⫹⫺ *Prefix :* ${usedPrefix}
-║├⫹⫺ *Tiempo Activo:* ${uptime}
-║├⫹⫺ *Registrado :* ${rtotalreg} de ${totalreg} usuarios
-║╰────────────── 
-╚══════════════════⋆
+*U S U A R I O*
+*Nombre:* ${name}
+*Nivel:* ${level}
+*Exp:* ${exp}
 
-╔═════「 ＨＯＹ 」════╗
-║⫹⫺ *Fecha :* ${date}
-〬╚═════ ≪ •❈• ≫ ═════╝
+*H O Y*
+*Fecha:* ${date}
 
-〬╔══「 I N F O R M A C I Ó N 」═╗
-〬║ႌ〬⫹⫺ ${usedPrefix}estado
-║ႌ〬⫹⫺ ${usedPrefix}owner
-〬║ႌ〬⫹⫺ ${usedPrefix}grouplist
-║ႌ〬⫹⫺ ${usedPrefix}donar
-║ႌ〬⫹⫺ ${usedPrefix}grupos
-〬║ႌ〬⫹⫺ ${usedPrefix}infobot
-〬║ႌ〬⫹⫺ ${usedPrefix}cuentas
-〬║ႌ〬⫹⫺ ${usedPrefix}reporte
-║ႌ〬⫹⫺ ${usedPrefix}join
-║ႌ〬⫹⫺ ${usedPrefix}bot
-〬╚════ ≪ •❈• ≫ ════╝
+*I N F O*
+*Creador:* Azami
+*Número*: wa.me/59894808483
+*Bot oficial:* wa.me/5355772234
+*Tiempo activo:* ${uptime}
+*Usuarios:* ${rtotalreg}
 
-╔══「  J A D I B O T 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}Serbot 
-║ႌ〬⫹⫺ ${usedPrefix}jadibot
-║ႌ〬⫹⫺ ${usedPrefix}bots
-║ႌ〬⫹⫺ ${usedPrefix}deletesesion
-║ႌ〬⫹⫺ ${usedPrefix}stop
-〬╚════ ≪ •❈• ≫ ════╝
+*「 I N F O R M A C I Ó N 」*
+${usedPrefix}estado
+${usedPrefix}owner
+${usedPrefix}grouplist
+${usedPrefix}donar
+${usedPrefix}grupos
+${usedPrefix}infobot
+${usedPrefix}cuentas
+${usedPrefix}reporte
+${usedPrefix}join
+bot
 
-╔══「 D E S C A R G A S 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}play
-║ႌ〬⫹⫺ ${usedPrefix}play2
-║ႌ〬⫹⫺ ${usedPrefix}yta
-║ႌ〬⫹⫺ ${usedPrefix}ytv
-║ႌ〬⫹⫺ ${usedPrefix}facebook
-║ႌ〬⫹⫺ ${usedPrefix}tiktok
-║ႌ〬⫹⫺ ${usedPrefix}instagram
-║ႌ〬⫹⫺ ${usedPrefix}gitclone
-║ႌ〬⫹⫺ ${usedPrefix}pinterest
-║ႌ〬⫹⫺ ${usedPrefix}imagen
-║ႌ〬⫹⫺ ${usedPrefix}mediafire
-〬╚════ ≪ •❈• ≫ ════╝
+*「 S E R B O T/J A D I B O T 」*
+${usedPrefix}Serbot 
+${usedPrefix}jadibot
+${usedPrefix}bots
+${usedPrefix}deletesesion
+${usedPrefix}stop
 
-╔══「 B U S C A D O R E S 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}google
-║ႌ〬⫹⫺ ${usedPrefix}yts
-〬╚════ ≪ •❈• ≫ ════╝
+*「 D E S C A R G A S 」*
+${usedPrefix}play
+${usedPrefix}play2
+${usedPrefix}yta
+${usedPrefix}ytv
+${usedPrefix}facebook
+${usedPrefix}tiktok
+${usedPrefix}instagram
+${usedPrefix}gitclone
+${usedPrefix}pinterest
+${usedPrefix}imagen
+${usedPrefix}mediafire
 
-╔══「 C O N V E R T I D O R E S 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}toimg
-║ႌ〬⫹⫺ ${usedPrefix}tomp3
-║ႌ〬⫹⫺ ${usedPrefix}toptt
-║ႌ〬⫹⫺ ${usedPrefix}tourl
-║ႌ〬⫹⫺ ${usedPrefix}tovideo
-║ႌ〬⫹⫺ ${usedPrefix}tts
-〬╚════ ≪ •❈• ≫ ════╝
+*「 B U S C A D O R E S 」*
+${usedPrefix}google
+${usedPrefix}yts
 
-╔══「 A U D I O S   E F E C T O S 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}bass
-║ႌ〬⫹⫺ ${usedPrefix}blown
-║ႌ〬⫹⫺ ${usedPrefix}deep
-║ႌ〬⫹⫺ ${usedPrefix}earrape
-║ႌ〬⫹⫺ ${usedPrefix}fas
-║ႌ〬⫹⫺ ${usedPrefix}fast
-║ႌ〬⫹⫺ ${usedPrefix}nightcore
-║ႌ〬⫹⫺ ${usedPrefix}reverse
-║ႌ〬⫹⫺ ${usedPrefix}robot
-║ႌ〬⫹⫺ ${usedPrefix}slow
-║ႌ〬⫹⫺ ${usedPrefix}smooth
-║ႌ〬⫹⫺ ${usedPrefix}tupai
-║ႌ〬⫹⫺ ${usedPrefix}squirrel
-║ႌ〬⫹⫺ ${usedPrefix}chipmunk
-〬╚════ ≪ •❈• ≫ ════╝
+*「 C O N V E R T I D O R E S 」*
+${usedPrefix}toimg
+${usedPrefix}tomp3
+${usedPrefix}toptt
+${usedPrefix}tourl
+${usedPrefix}tovideo
+${usedPrefix}tts
 
-╔══「 H E R R A M I E N T A S 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}acortar
-║ႌ〬⫹⫺ ${usedPrefix}qr
-║ႌ〬⫹⫺ ${usedPrefix}delete
-║ႌ〬⫹⫺ ${usedPrefix}readmore
-║ႌ〬⫹⫺ ${usedPrefix}styletext
-〬╚════ ≪ •❈• ≫ ════╝
+*「 A U D I O S   E F E C T O S 」*
+${usedPrefix}bass
+${usedPrefix}blown
+${usedPrefix}deep
+${usedPrefix}earrape
+${usedPrefix}fas
+${usedPrefix}fast
+${usedPrefix}nightcore
+${usedPrefix}reverse
+${usedPrefix}robot
+${usedPrefix}slow
+${usedPrefix}smooth
+${usedPrefix}tupai
+${usedPrefix}squirrel
+${usedPrefix}chipmunk
 
-╔══「 J U E G O S 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}mates
-║ႌ〬⫹⫺ ${usedPrefix}math
-║ႌ〬⫹⫺ ${usedPrefix}simi
-║ႌ〬⫹⫺ ${usedPrefix}suerte
-║ႌ〬⫹⫺ ${usedPrefix}ppt
-║ႌ〬⫹⫺ ${usedPrefix}tictactoe
-║ႌ〬⫹⫺ ${usedPrefix}deltictactoe
-║ႌ〬⫹⫺ ${usedPrefix}topgays
-║ႌ〬⫹⫺ ${usedPrefix}topotakus
-║ႌ〬⫹⫺ ${usedPrefix}gay
-║ႌ〬⫹⫺ ${usedPrefix}doxear
-║ႌ〬⫹⫺ ${usedPrefix}pregunta
-║ႌ〬⫹⫺ ${usedPrefix}apostar
-║ႌ〬⫹⫺ ${usedPrefix}slot
-║ႌ〬⫹⫺ ${usedPrefix}dado
-〬╚════ ≪ •❈• ≫ ════╝
+*「 H E R R A M I E N T A S 」*
+${usedPrefix}acortar
+${usedPrefix}qr
+${usedPrefix}delete
+${usedPrefix}readmore
+${usedPrefix}styletext
 
-╔══「 G R U P O S 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}grupo
-║ႌ〬⫹⫺ ${usedPrefix}kick
-║ႌ〬⫹⫺ ${usedPrefix}add
-║ႌ〬⫹⫺ ${usedPrefix}banchat
-║ႌ〬⫹⫺ ${usedPrefix}unbanchat
-║ႌ〬⫹⫺ ${usedPrefix}admins
-║ႌ〬⫹⫺ ${usedPrefix}infogroup
-║ႌ〬⫹⫺ ${usedPrefix}promote
-║ႌ〬⫹⫺ ${usedPrefix}demote
-║ႌ〬⫹⫺ ${usedPrefix}hidetag
-║ႌ〬⫹⫺ ${usedPrefix}tagall
-║ႌ〬⫹⫺ ${usedPrefix}link
-║ႌ〬⫹⫺ ${usedPrefix}banchat
-║ႌ〬⫹⫺ ${usedPrefix}unbanchat
-〬╚════ ≪ •❈• ≫ ════╝
+*「 G R U P O S 」*
+${usedPrefix}grupo
+${usedPrefix}kick
+${usedPrefix}add
+${usedPrefix}banchat
+${usedPrefix}unbanchat
+${usedPrefix}admins
+${usedPrefix}infogroup
+${usedPrefix}promote
+${usedPrefix}demote
+${usedPrefix}hidetag
+${usedPrefix}tagall
+${usedPrefix}link
+${usedPrefix}banchat
+${usedPrefix}unbanchat
 
-╔══「 E N A B L E / D I S A B L E 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}enable welcome
-║ႌ〬⫹⫺ ${usedPrefix}disable welcome
-║ႌ〬⫹⫺ ${usedPrefix}enable public
-║ႌ〬⫹⫺ ${usedPrefix}disable public
-║ႌ〬⫹⫺ ${usedPrefix}enble antilink
-║ႌ〬⫹⫺ ${usedPrefix}disable antilink
-║ႌ〬⫹⫺ ${usedPrefix}enable antilink2
-║ႌ〬⫹⫺ ${usedPrefix}disable antilink2
-║ႌ〬⫹⫺ ${usedPrefix}enable restrict
-║ႌ〬⫹⫺ ${usedPrefix}disable restrict
-║ႌ〬⫹⫺ ${usedPrefix}enable autoread
-║ႌ〬⫹⫺ ${usedPrefix}disable autoread
-║ႌ〬⫹⫺ ${usedPrefix}enable detect
-║ႌ〬⫹⫺ ${usedPrefix}disable detect
-║ႌ〬⫹⫺ ${usedPrefix}enable pconly
-║ႌ〬⫹⫺ ${usedPrefix}disable pconly
-║ႌ〬⫹⫺ ${usedPrefix}enable gconly
-║ႌ〬⫹⫺ ${usedPrefix}disable gconly
-〬╚════ ≪ •❈• ≫ ════╝
+*「 E N A B L E / D I S A B L E 」*
+${usedPrefix}enable welcome
+${usedPrefix}disable welcome
+${usedPrefix}enable public
+${usedPrefix}disable public
+${usedPrefix}enble antilink
+${usedPrefix}disable antilink
+${usedPrefix}enable antilink2
+${usedPrefix}disable antilink2
+${usedPrefix}enable restrict
+${usedPrefix}disable restrict
+${usedPrefix}enable autoread
+${usedPrefix}disable autoread
+${usedPrefix}enable detect
+${usedPrefix}disable detect
+${usedPrefix}enable pconly
+${usedPrefix}disable pconly
+${usedPrefix}enable gconly
+${usedPrefix}disable gconly
 
-╔══「 R P G 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}minar
-║ႌ〬⫹⫺ ${usedPrefix}minar3
-║ႌ〬⫹⫺ ${usedPrefix}minardiamantes
-║ႌ〬⫹⫺ ${usedPrefix}daily
-║ႌ〬⫹⫺ ${usedPrefix}work
-║ႌ〬⫹⫺ ${usedPrefix}afk
-║ႌ〬⫹⫺ ${usedPrefix}rob
-║ႌ〬⫹⫺ ${usedPrefix}limit
-║ႌ〬⫹⫺ ${usedPrefix}reg
-║ႌ〬⫹⫺ ${usedPrefix}unreg
-║ႌ〬⫹⫺ ${usedPrefix}myns
-║ႌ〬⫹⫺ ${usedPrefix}perfil
-║ႌ〬⫹⫺ ${usedPrefix}levelup
-〬╚════ ≪ •❈• ≫ ════╝
+*「 R P G 」*
+${usedPrefix}minar
+${usedPrefix}daily
+${usedPrefix}work
+${usedPrefix}rob
+${usedPrefix}limit
+${usedPrefix}reg
+${usedPrefix}unreg
+${usedPrefix}myns
+${usedPrefix}perfil
+${usedPrefix}levelup
 
-╔══「 STICKER 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}s
-║ႌ〬⫹⫺ ${usedPrefix}wm
-〬╚════ ≪ •❈• ≫ ════╝
+*「 STICKER 」*
+${usedPrefix}s
+${usedPrefix}wm
 
-╔══「 O W N E R 」═╗
-║ႌ〬⫹⫺ ${usedPrefix}update
-║ႌ〬⫹⫺ ${usedPrefix}restart
-║ႌ〬⫹⫺ ${usedPrefix}autoadmin
-║ႌ〬⫹⫺ ${usedPrefix}leave
-║ႌ〬⫹⫺ ${usedPrefix}salir
-║ႌ〬⫹⫺ ${usedPrefix}cleartpm
-║ႌ〬⫹⫺ ${usedPrefix}bc
-║ႌ〬⫹⫺ ${usedPrefix}bcgc
-║ႌ〬⫹⫺ ${usedPrefix}bcc
-║ႌ〬⫹⫺ ${usedPrefix}banuser
-║ႌ〬⫹⫺ ${usedPrefix}unbanuser
-〬╚════ ≪ •❈• ≫ ════╝`
+*「 O W N E R 」*
+${usedPrefix}update
+${usedPrefix}restart
+${usedPrefix}cleartpm
+${usedPrefix}bc
+${usedPrefix}bcgc
+${usedPrefix}bcc
+${usedPrefix}banuser
+${usedPrefix}unbanuser`
 function _0x2daf() {
-    const _0x4c1076 = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/menus/Menu1.jpg', '1019845zOpQQK', 'pdf', 'chat'];
+    const _0x4c1076 = ['namedoc', 'social', '1017dFLzIP', '11680bWFOeX', 'sendMessage', '1FnTozH', '6qNtNxK', '445374chjKag', '2096504ySppGm', '627669MaFyqj', 'readFileSync', 'En breve se enviará el menú...', '374160lMCurS', '356228pujvOS', './storage/menus/Menu3.jpg', '1019845zOpQQK', 'pdf', 'chat'];
     _0x2daf = function() {
         return _0x4c1076;
     };
     return _0x2daf();
 }
-const _0x110137 = _0x13bb; 
+const _0x110137 = _0x13bb;
 (function(_0x14d3d7, _0x67b65e) {
     const _0x3a56bf = {
             _0x2e964c: 0x1b0,
@@ -312,18 +267,17 @@ let buttonMessage = {
             'mediaType': 0x1,
             'previewType': "PHOTO",
             'title': 'Hola!!',
-            'thumbnail': fs.readFileSync('./storage/img/Menu1.jpg'),
+            'thumbnail': fs.readFileSync('./storage/menus/Menu1.jpg'),
             'renderLargerThumbnail': !![],
             'sourceUrl': yt
         }
     },
-  'caption': menu['trim']()
+    'caption': menu['trim']()
 }
 await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)], buttonMessage, { 'quoted': fkontak })
 } catch {
-conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR USE EL MENUCOMPLETO CON (.menucompleto)*', m)
+conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 }}
-handler.tags = ['main']
 handler.command = /^(menu)$/i
 handler.register = true
 export default handler
@@ -354,4 +308,4 @@ function ucapan() {
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
-}
+    }
