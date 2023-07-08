@@ -71,6 +71,7 @@ handler.command = handler.help = ['play2', 'playvideo']
 handler.tags = ['dl']
 handler.exp = 0
 handler.diamond = true 
+handler.register = true
 handler.premium = false
 export default handler
 async function cut(url) {
