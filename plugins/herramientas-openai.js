@@ -18,5 +18,6 @@ m.react('💬')
 handler.help = ['ia <text>']
 handler.tags = ['tools']
 handler.command = ['ia', 'ai', 'chatgpt', 'openai', 'gpt']
-
+handler.register = true
+handler.diamond = true
 export default handler
