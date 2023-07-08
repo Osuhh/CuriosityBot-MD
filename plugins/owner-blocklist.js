@@ -11,7 +11,7 @@ return conn.reply(m.chat, txt, m, { mentions: await conn.parseMention(txt) })
 console.log(err);
 throw 'No hay números bloqueados'})}
 handler.help = ['blocklist']
-handler.tags = ['main']
+handler.tags = ['owner']
 handler.command = ['blocklist', 'listblock'] 
 handler.rowner = true
 export default handler
