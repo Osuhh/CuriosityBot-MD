@@ -72,6 +72,7 @@ handler.command = handler.help = ['play','song','youtube','ytmp3','ds','download
 handler.tags = ['dl'];
 handler.exp = 0;
 handler.diamond = true
+handler.register = true
 handler.premium = false;
 export default handler
 async function cut(url) {
