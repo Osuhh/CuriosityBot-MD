@@ -13,4 +13,5 @@ await conn.sendFile(m.chat, out, 'error.png', null, fkontak, m)
 handler.help = ['toimg (reply)']
 handler.tags = ['convertido']
 handler.command = ['toimg', 'jpg', 'png']
+handler.diamond = true
 export default handler
