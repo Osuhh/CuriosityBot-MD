@@ -21,12 +21,6 @@ function connect(conn, PORT) {
         res.end(await toBuffer(_qr))
     })
 
-    // let io = new Socket(server)
-    // io.on('connection', socket => {
-    //     let { unpipeEmit } = pipeEmit(conn, socket, 'conn-')
-    //     socket.on('disconnect', unpipeEmit)
-    // })
-
     server.listen(PORT, () => {
         console.log('App listened on port', PORT)
         if (opts['keepalive']) keepAlive()
