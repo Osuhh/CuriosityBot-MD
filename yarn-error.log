@@ -58,7 +58,7 @@ npm manifest:
       },
       "license": "GPL-3.0-or-later",
       "dependencies": {
-          "@adiwajshing/baileys": "^4.4.0",
+          "@adiwajshing/baileys": "npm:baileys@^6.0.9",
           "@bochilteam/scraper": "^3.0.0",
           "awesome-phonenumber": "^3.4.0",
           "axios": "^1.1.2",
