@@ -514,10 +514,9 @@ export async function participantsUpdate({ id, participants, action }) {
                     } catch (e) {
                     } finally {
                     let apii = await this.getFile(pp)
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*⚠️ ESTE GRUPO NO TIENE DESCRIPCIÓN ⚠️*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
 this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] })                             
-//this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ? 'Bienvenido 👋' : 'Adios 🚮'), (action == 'add' ? '.ok' : '.llorar')], ['🛑 ᴍᴇɴᴜ 🛑', `#menu`]], null, {mentions: this.parseMention(text)})
                    }
                 }
             }
@@ -564,8 +563,6 @@ export async function callUpdate(callUpdate) {
     if (nk.isGroup == false) {
     if (nk.status == "offer") {
     let callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, Las ${nk.isVideo ? 'videollamadas' : 'llamadas'} las llamadas están prohibidas, seras bloqueado`, false, { mentions: [nk.from] })
-    //let data = global.owner.filter(([id, isCreator]) => id && isCreator)
-    //await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
     let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;Azami 👑;;;\nFN:Azami\nORG:Azami 👑\nTITLE:\nitem1.TEL;waid=18134039996:+598 9999\nitem1.X-ABLabel:Azami 👑\nX-WA-BIZ-DESCRIPTION:Solo cosas del bot.\nX-WA-BIZ-NAME:Azami 👑\nEND:VCARD`
     await this.sendMessage(nk.from, { contacts: { displayName: 'Azami 👑', contacts: [{ vcard }] }}, {quoted: callmsg})
     await this.updateBlockStatus(nk.from, 'block')
