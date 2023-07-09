@@ -191,7 +191,7 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('☢️ Escanea este codigo QR,\nel codigo QR expira en 60 segundos.'));
+console.log(chalk.yellow('☢️ Escanea este codigo QR,\nEl codigo QR expira en 45 segundos.'));
       }
 if (connection === 'open') {
 console.log(chalk.yellow('🟢  CONECTADO CORRECTAMENTE'))
