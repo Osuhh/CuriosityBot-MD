@@ -104,7 +104,7 @@ const credsFilePath = path.join(SESSION_DIR, CREDENTIALS_FILE);
   
 
   copyFileSync(credsFilePath, backupFilePath);
-  console.log(`Creado el archivo de respaldo: ${backupFilePath}`);
+  console.log(`\nSe a creado el archivo de respaldo: ${backupFilePath}`);
 
 }
  
@@ -191,12 +191,12 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('⚡ Escanea este codigo QR,\nel codigo QR expira en 60 segundos.'));
+console.log(chalk.yellow('☢️ Escanea este codigo QR,\nel codigo QR expira en 60 segundos.'));
       }
 if (connection === 'open') {
-console.log(chalk.yellow('🔰 CONECTADO CORRECTAMENTE'))
+console.log(chalk.yellow('🟢  CONECTADO CORRECTAMENTE'))
 if (existsSync(global.authFile)) {
-    console.log(chalk.green('✓ Archivo de credenciales guardado correctamente'));
+    console.log(chalk.green('\n✓ Archivo de credenciales guardado correctamente'));
   } else {
     console.log(chalk.yellow('⚠️ㅤError al guardar el archivo de credenciales'));
   }
