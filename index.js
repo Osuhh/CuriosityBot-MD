@@ -16,9 +16,9 @@ const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
 say('Curiosity\nBot\nMD', {
-  font: 'tiny',
+  font: 'block',
   align: 'center',
-  colors: ['#ff8000']
+  colors: ['yellow, green']
 })
 say(`'${name}' By @Azami19._`, {
   font: 'console',
