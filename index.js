@@ -18,7 +18,7 @@ const rl = createInterface(process.stdin, process.stdout)
 say('Curiosity\nBot\nMD', {
   font: 'block',
   align: 'center',
-  colors: ['yellow, green']
+  colors: ['yellow', 'green']
 })
 say(`'${name}' By @Azami19._`, {
   font: 'console',
