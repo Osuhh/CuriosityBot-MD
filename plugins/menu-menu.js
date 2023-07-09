@@ -312,7 +312,7 @@ let buttonMessage = {
             'mediaType': 0x1,
             'previewType': "PHOTO",
             'title': 'Hola!!',
-            'thumbnail': fs.readFileSync('./storage/img/Menu1.jpg'),
+            'thumbnail': fs.readFileSync('./storage/img/Menu2.jpg'),
             'renderLargerThumbnail': !![],
             'sourceUrl': yt
         }
@@ -321,7 +321,7 @@ let buttonMessage = {
 }
 await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)], buttonMessage, { 'quoted': fkontak })
 } catch {
-conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR USE EL MENUCOMPLETO CON (.menucompleto)*', m)
+conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENUCOMPLETO: (.menucompleto)*', m)
 }}
 handler.tags = ['main']
 handler.command = /^(menu)$/i
