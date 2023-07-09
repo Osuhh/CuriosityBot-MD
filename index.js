@@ -1,12 +1,12 @@
-console.log('🚀 Iniciando...')
+console.log('🚀 Iniciando...');
 import { join, dirname } from 'path'
 import { createRequire } from 'module';
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'url';
 import { setupMaster, fork } from 'cluster'
 import { watchFile, unwatchFile } from 'fs'
 import cfonts from 'cfonts';
-import { createInterface } from 'readline'
-import yargs from 'yargs'
+import { createInterface } from 'readline';
+import yargs from 'yargs';
 
 // https://stackoverflow.com/a/50052194
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -18,7 +18,7 @@ const rl = createInterface(process.stdin, process.stdout)
 say('Curiosity\nBot\nMD', {
   font: 'tiny',
   align: 'center',
-  colors: ['cyan', 'magenta']
+  colors: ['#ff8000']
 })
 say(`'${name}' By @Azami19._`, {
   font: 'console',
