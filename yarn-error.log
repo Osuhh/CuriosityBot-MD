@@ -19,8 +19,8 @@ Trace:
 npm manifest: 
   { 
       "name": "CuriosityBot-MD",
-      "version": "2.2.2",
-      "description": "Bot simple con pocos comando",
+      "version": "1.0.1",
+      "description": "Bot simple con pocos comandos",
       "main": "index.js",
       "type": "module",
       "directories": {
@@ -45,16 +45,16 @@ npm manifest:
           "MD",
           "baileys-md"
       ],
-      "homepage": "https://github.com/Azami19/CuriosityBot-MD",
+      "homepage": "https://github.com/Undefined17/CuriosityBot-MD",
       "author": {
           "name": "Undefined17"
       },
       "repository": {
           "type": "git",
-          "url": "git+https://github.com/Azami19/CuriosityBot-MD.git"
+          "url": "git+https://github.com/Undefined/CuriosityBot-MD.git"
       },
       "bugs": {
-          "url": "https://github.com/Azami19/CuriosityBot-MD/issues"
+          "url": "https://github.com/Undefined17/CuriosityBot-MD/issues"
       },
       "license": "GPL-3.0-or-later",
       "dependencies": {
