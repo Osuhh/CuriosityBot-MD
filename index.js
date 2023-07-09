@@ -20,10 +20,10 @@ say('Curiosity\nBot\nMD', {
   align: 'center',
   colors: ['yellow', 'green']
 })
-say(`'${name}' By @Azami19._`, {
+say(`${name} By @Azami`, {
   font: 'console',
   align: 'center',
-  colors: ['red', 'magenta']
+  colors: ['yellowBright']
 })
 
 var isRunning = false
