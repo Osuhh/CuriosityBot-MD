@@ -8,7 +8,6 @@ import { createRequire } from 'module'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const require = createRequire(__dirname)
-
 let folders = ['.', ...Object.keys(require(path.join(__dirname, './package.json')).directories)]
 let files = []
 for (let folder of folders)
