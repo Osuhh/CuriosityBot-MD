@@ -19,8 +19,8 @@ global.owner = [
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 global.animxscans = [['56962237366']]
-global.suittag = ['59894808483'] 
-global.mods = [] 
+global.suittag = ['59894808483'] ['5493815977980']
+global.mods = [528993291091] 
 global.prems = []
 
 global.keysZens = ['LuOlangNgentot', 'c2459db922', '37CC845916', '6fb0eff124', 'hdiiofficial', 'fiktod', 'BF39D349845E', '675e34de8a', '0b917b905e6f']
