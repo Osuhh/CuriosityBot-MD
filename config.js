@@ -12,7 +12,7 @@ global.__filename = function filename(pathURL = import.meta.url, rmPrefix = plat
 const __dirname = global.__dirname(import.meta.url)
 
 //⊱ ━━━━━.⋅ Owner ⋅.━━━━ ⊰
-global.owner = [
+global.owner = [5493815786167
   ['59894808483', 'Azami - Creador 🥏', true],
   ['5214531106422'], ['59894808483'], ['593968585383'], ['5492266613038'], ['5492266466080'],
   ['50258115623'], ['573106040746']]  
